@@ -1,0 +1,144 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="assembly-ide-war:war exploded">
+    <output-path>$PROJECT_DIR$/../../assembly/assembly-ide-war/target/assembly-ide-war-4.4.2</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="assembly-ide-war" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.google.guava:guava:18.0" />
+          <element id="library" level="project" name="Maven: com.google.guava:guava-gwt:18.0" />
+          <element id="library" level="project" name="Maven: com.google.gwt.inject:gin:2.1.2" />
+          <element id="library" level="project" name="Maven: com.google.inject:guice:4.1.0" />
+          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Maven: com.google.inject.extensions:guice-assistedinject:4.1.0" />
+          <element id="library" level="project" name="Maven: com.google.inject.extensions:guice-multibindings:4.1.0" />
+          <element id="library" level="project" name="Maven: javax.inject:javax.inject:1" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-commons-gwt:4.4.2" />
+          <element id="library" level="project" name="Maven: com.google.gwt:gwt-elemental:2.7.0" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-commons-annotations:4.4.2" />
+          <element id="library" level="project" name="Maven: org.vectomatic:lib-gwt-svg:0.5.10" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-commons-inject:4.4.2" />
+          <element id="library" level="project" name="Maven: com.google.inject.extensions:guice-servlet:4.1.0" />
+          <element id="library" level="project" name="Maven: javax.annotation:javax.annotation-api:1.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-commons-lang:4.4.2" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-compress:1.9" />
+          <element id="library" level="project" name="Maven: org.everrest:everrest-integration-guice:1.12.3" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.6" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-ide-api:4.4.2" />
+          <element id="library" level="project" name="Maven: javax.validation:validation-api:1.1.0.Final" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-api-auth:4.4.2" />
+          <element id="library" level="project" name="Maven: com.google.http-client:google-http-client-jackson2:1.19.0" />
+          <element id="library" level="project" name="Maven: com.google.oauth-client:google-oauth-client:1.19.0" />
+          <element id="library" level="project" name="Maven: io.swagger:swagger-annotations:1.5.9" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-api-core:4.4.2" />
+          <element id="library" level="project" name="Maven: org.everrest:everrest-websockets:1.12.3" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-api-debug-shared:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-api-dto:4.4.2" />
+          <element id="library" level="project" name="Maven: org.reflections:reflections:0.9.9" />
+          <element id="library" level="project" name="Maven: org.javassist:javassist:3.18.2-GA" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-api-factory-shared:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-api-git-shared:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-api-machine-shared:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-api-model:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-api-project-shared:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-api-project-templates-shared:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-api-ssh-shared:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-api-user-shared:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-api-workspace-shared:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-ide-app:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-ide-generators:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-ide-ui:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:wsmaster-local:4.4.2" />
+          <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.3.1" />
+          <element id="library" level="project" name="Maven: commons-io:commons-io:2.4" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-api-machine:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-api-ssh:4.4.2" />
+          <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.2.1" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-api-user:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-api-workspace:4.4.2" />
+          <element id="library" level="project" name="Maven: org.everrest:everrest-core:1.12.3" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.lib:che-swagger-module:4.4.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.5.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.5.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.5.0" />
+          <element id="library" level="project" name="Maven: io.swagger:swagger-core:1.5.9" />
+          <element id="library" level="project" name="Maven: io.swagger:swagger-jaxrs:1.5.9" />
+          <element id="library" level="project" name="Maven: io.swagger:swagger-models:1.5.9" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.4" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.5.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-joda:2.5.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.5.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:2.5.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.5.0" />
+          <element id="library" level="project" name="Maven: joda-time:joda-time:2.3" />
+          <element id="library" level="project" name="Maven: org.yaml:snakeyaml:1.14" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-cpp-lang-ide:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-cpp-lang-shared:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-debugger-ide:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-api-project:4.4.2" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-analyzers-common:5.2.1" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-core:5.2.1" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-queryparser:5.2.1" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-queries:5.2.1" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-sandbox:5.2.1" />
+          <element id="library" level="project" name="Maven: org.apache.tika:tika-core:1.11" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:wsagent-local:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-docker-client:4.4.2" />
+          <element id="library" level="project" name="Maven: javax.ws.rs:javax.ws.rs-api:2.0" />
+          <element id="library" level="project" name="Maven: net.java.dev.jna:jna:4.1.0" />
+          <element id="library" level="project" name="Maven: org.bouncycastle:bcpkix-jdk15on:1.51" />
+          <element id="library" level="project" name="Maven: org.bouncycastle:bcprov-jdk15on:1.51" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.core:che-core-commons-json:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-ext-dashboard-client:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-gdb-ide:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-git-ext-git:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-github-ide:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-github-oauth2:4.4.2" />
+          <element id="library" level="project" name="Maven: com.google.http-client:google-http-client:1.19.0" />
+          <element id="library" level="project" name="Maven: javax.mail:mail:1.4.4" />
+          <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-github-shared:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-gwt-ext-gwt:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-help-ext-client:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-java-debugger-ide:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-java-ext-lang-client:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-java-ext-lang-shared:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-java-plain-ide:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-java-plain-shared:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-machine-ext-client:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-machine-ssh-client:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-maven-ide:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-maven-shared:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-nodejs-lang-ide:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-nodejs-lang-shared:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-orion-compare:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-orion-editor:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-product-info:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-python-lang-ide:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-python-lang-shared:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-sdk-env-local:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-sdk-ext-plugins:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-ssh-key-ide:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-ssh-machine:4.4.2" />
+          <element id="library" level="project" name="Maven: com.jcraft:jsch:0.1.53" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-svn-ext-ide:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-svn-ext-shared:4.4.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.che.plugin:che-plugin-web-ext-web:4.4.2" />
+          <element id="archive" name="che-plugin-emf-ide-4.4.2.jar">
+            <element id="module-output" name="che-plugin-emf-ide" />
+          </element>
+          <element id="archive" name="che-plugin-emf-shared-4.4.2.jar">
+            <element id="module-output" name="che-plugin-emf-shared" />
+          </element>
+          <element id="library" level="project" name="Maven: com.google.gwt:gwt-servlet:2.7.0" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/../../assembly/assembly-ide-war/target/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="assembly-ide-war/web/Web" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,22 @@
+#!/bin/bash
+# Exports the Hamster time tracking data of a specific day into the clipboard
+# If no argument is specified, a date-picker appears to specify the date to be exported.
+# $ hamster-export
+
+# If the argument "y" is specified, the time tracking data of yesterday are exported.
+# $ hamster-export y
+
+# You can also specify the date in the format "2015-12-24" directly in the first argument.
+# $ hamster-export 2015-12-24
+
+if [ -z "$1" ]
+then
+	HamsterExport.py | xclip -selection clipboard
+else
+	if [ $1 = "y" ]
+	then
+		HamsterExport.py $(date +"%Y-%-m-%-d" --date="yesterday") | xclip -selection clipboard
+	else
+		HamsterExport.py "$1" | xclip -selection clipboard
+	fi
+fi

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.eclipse.che.lib:che-swagger-module:5.0.0-M4-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/che/lib/che-swagger-module/5.0.0-M4-SNAPSHOT/che-swagger-module-5.0.0-M4-20160926.141106-1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/che/lib/che-swagger-module/5.0.0-M4-SNAPSHOT/che-swagger-module-5.0.0-M4-20160926.141106-1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/che/lib/che-swagger-module/5.0.0-M4-SNAPSHOT/che-swagger-module-5.0.0-M4-20160926.141106-1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="assembly-ide-war:war">
+    <output-path>$PROJECT_DIR$/../../assembly/assembly-ide-war/target</output-path>
+    <root id="archive" name="assembly-ide-war-4.4.2.war">
+      <element id="artifact" artifact-name="assembly-ide-war:war exploded" />
+    </root>
+  </artifact>
+</component>

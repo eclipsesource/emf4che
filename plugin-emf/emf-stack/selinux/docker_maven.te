@@ -1,0 +1,11 @@
+
+module docker_maven 1.0;
+
+require {
+	type svirt_lxc_net_t;
+	type user_home_t;
+	class file { write open read lock };
+}
+
+#============= svirt_lxc_net_t ==============
+allow svirt_lxc_net_t user_home_t:file { write open read lock };

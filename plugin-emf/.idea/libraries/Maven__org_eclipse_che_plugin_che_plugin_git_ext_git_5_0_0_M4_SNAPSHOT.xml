@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.eclipse.che.plugin:che-plugin-git-ext-git:5.0.0-M4-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/che/plugin/che-plugin-git-ext-git/5.0.0-M4-SNAPSHOT/che-plugin-git-ext-git-5.0.0-M4-20160927.093521-3.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/che/plugin/che-plugin-git-ext-git/5.0.0-M4-SNAPSHOT/che-plugin-git-ext-git-5.0.0-M4-20160927.093521-3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/che/plugin/che-plugin-git-ext-git/5.0.0-M4-SNAPSHOT/che-plugin-git-ext-git-5.0.0-M4-20160927.093521-3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

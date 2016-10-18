@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.eclipse.che.core:che-core-api-user:5.0.0-M4-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/che/core/che-core-api-user/5.0.0-M4-SNAPSHOT/che-core-api-user-5.0.0-M4-20160927.093506-3.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/che/core/che-core-api-user/5.0.0-M4-SNAPSHOT/che-core-api-user-5.0.0-M4-20160927.093506-3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/che/core/che-core-api-user/5.0.0-M4-SNAPSHOT/che-core-api-user-5.0.0-M4-20160927.093506-3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

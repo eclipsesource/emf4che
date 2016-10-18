@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../assembly/assembly-ide-war/assembly-ide-war.iml" filepath="$PROJECT_DIR$/../../assembly/assembly-ide-war/assembly-ide-war.iml" />
+      <module fileurl="file://$PROJECT_DIR$/che-plugin-emf-ide/che-plugin-emf-ide.iml" filepath="$PROJECT_DIR$/che-plugin-emf-ide/che-plugin-emf-ide.iml" />
+      <module fileurl="file://$PROJECT_DIR$/che-plugin-emf-server/che-plugin-emf-server.iml" filepath="$PROJECT_DIR$/che-plugin-emf-server/che-plugin-emf-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/che-plugin-emf-shared/che-plugin-emf-shared.iml" filepath="$PROJECT_DIR$/che-plugin-emf-shared/che-plugin-emf-shared.iml" />
+    </modules>
+  </component>
+</project>

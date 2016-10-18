@@ -1,0 +1,48 @@
+
+module docker_X11 1.0;
+
+require {
+	type sssd_t;
+	type svirt_lxc_net_t;
+	type user_tmp_t;
+	type chronyd_t;
+	type svirt_sandbox_file_t;
+	type dhcpc_t;
+	type NetworkManager_t;
+	type dnsmasq_t;
+	class lnk_file read;
+	class sock_file write;
+}
+
+#============= NetworkManager_t ==============
+
+#!!!! The file '/etc/localtime' is mislabeled on your system.  
+#!!!! Fix with $ restorecon -R -v /etc/localtime
+allow NetworkManager_t svirt_sandbox_file_t:lnk_file read;
+
+#============= chronyd_t ==============
+
+#!!!! The file '/etc/localtime' is mislabeled on your system.  
+#!!!! Fix with $ restorecon -R -v /etc/localtime
+allow chronyd_t svirt_sandbox_file_t:lnk_file read;
+
+#============= dhcpc_t ==============
+
+#!!!! The file '/etc/localtime' is mislabeled on your system.  
+#!!!! Fix with $ restorecon -R -v /etc/localtime
+allow dhcpc_t svirt_sandbox_file_t:lnk_file read;
+
+#============= dnsmasq_t ==============
+
+#!!!! The file '/etc/localtime' is mislabeled on your system.  
+#!!!! Fix with $ restorecon -R -v /etc/localtime
+allow dnsmasq_t svirt_sandbox_file_t:lnk_file read;
+
+#============= sssd_t ==============
+
+#!!!! The file '/etc/localtime' is mislabeled on your system.  
+#!!!! Fix with $ restorecon -R -v /etc/localtime
+allow sssd_t svirt_sandbox_file_t:lnk_file read;
+
+#============= svirt_lxc_net_t ==============
+allow svirt_lxc_net_t user_tmp_t:sock_file write;

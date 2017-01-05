@@ -7,7 +7,7 @@
     http://www.eclipse.org/legal/epl-v10.html
 
     Contributors:
-      Codenvy, S.A. - initial API and implementation
+      EclipseSource - Initial implementation
 
 -->
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'

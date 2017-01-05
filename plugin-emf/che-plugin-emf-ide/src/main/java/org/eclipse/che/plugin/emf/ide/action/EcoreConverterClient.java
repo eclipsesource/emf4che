@@ -6,9 +6,8 @@
  * http://www.eclipse.org/legal/epl-v10.html
  *
  * Contributors:
- *   Codenvy, S.A. - initial API and implementation
+ *   EclipseSource - Initial implementation
  *******************************************************************************/
-
 package org.eclipse.che.plugin.emf.ide.action;
 
 import org.eclipse.che.api.promises.client.Promise;

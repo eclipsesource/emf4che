@@ -92,7 +92,7 @@
                 <artifactId>maven-antrun-plugin</artifactId>
                 <executions>
                     <execution>
-                        <id>add-stack</id>
+                        <id>add-stack-che-in-che</id>
                         <phase>package</phase>
                         <goals>
                             <goal>run</goal>
@@ -104,6 +104,23 @@
                                 <replaceregexp file="${project.build.directory}/stacks/stacks.json" flags="m">
                                     <regexp pattern="^]$" />
                                     <substitution expression=", ${stack.che-in-che} ]" />
+                                </replaceregexp>
+                            </target>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>add-stack-emf</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <loadfile property="stack.emf-stack" srcFile="${project.basedir}/../../plugin-emf/emf-stack/emf-stack.json" />
+                                <unzip dest="${project.build.directory}/stacks" src="${org.eclipse.che.core:che-core-ide-stacks:jar}" />
+                                <replaceregexp file="${project.build.directory}/stacks/stacks.json" flags="m">
+                                    <regexp pattern="^]$" />
+                                    <substitution expression=", ${stack.emf-stack} ]" />
                                 </replaceregexp>
                             </target>
                         </configuration>

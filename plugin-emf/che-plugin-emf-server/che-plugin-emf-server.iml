@@ -10,29 +10,34 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.5.0" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.5.0" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.5.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.inject:guice:4.1.0" level="project" />
     <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
     <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.inject.extensions:guice-multibindings:4.1.0" level="project" />
     <orderEntry type="library" name="Maven: javax.ws.rs:javax.ws.rs-api:2.0" level="project" />
-    <orderEntry type="module" module-name="che-core-api-core" />
+    <orderEntry type="library" name="Maven: org.eclipse.che.core:che-core-api-core:5.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.3.1" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:18.0" level="project" />
     <orderEntry type="library" name="Maven: javax.annotation:javax.annotation-api:1.2" level="project" />
     <orderEntry type="library" name="Maven: javax.validation:validation-api:1.1.0.Final" level="project" />
     <orderEntry type="library" name="Maven: net.java.dev.jna:jna:4.1.0" level="project" />
-    <orderEntry type="module" module-name="che-core-api-dto" />
-    <orderEntry type="library" name="Maven: org.reflections:reflections:0.9.9" level="project" />
-    <orderEntry type="library" name="Maven: org.javassist:javassist:3.18.2-GA" level="project" />
-    <orderEntry type="module" module-name="che-core-commons-annotations" />
-    <orderEntry type="module" module-name="che-core-commons-json" />
-    <orderEntry type="module" module-name="che-core-commons-lang" />
+    <orderEntry type="library" name="Maven: org.eclipse.che.core:che-core-commons-annotations:5.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.che.core:che-core-commons-json:5.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.che.core:che-core-commons-lang:5.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.everrest:everrest-core:1.13.1" level="project" />
     <orderEntry type="library" name="Maven: javax.mail:mail:1.4.4" level="project" />
     <orderEntry type="library" name="Maven: org.everrest:everrest-websockets:1.13.1" level="project" />
-    <orderEntry type="library" name="Maven: javax.servlet:javax.servlet-api:3.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.6" level="project" />
-    <orderEntry type="module" module-name="che-core-api-project" />
+    <orderEntry type="library" name="Maven: org.eclipse.che.core:che-core-api-dto:5.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.reflections:reflections:0.9.9" level="project" />
+    <orderEntry type="library" name="Maven: org.javassist:javassist:3.18.2-GA" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.che.core:che-core-api-machine:5.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.che.core:che-core-api-machine-shared:5.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.che.core:che-core-api-model:5.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.che.core:che-core-api-project:5.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: commons-fileupload:commons-fileupload:1.3.2" level="project" />
     <orderEntry type="library" name="Maven: commons-io:commons-io:2.4" level="project" />
     <orderEntry type="library" name="Maven: io.swagger:swagger-annotations:1.5.9" level="project" />
@@ -43,30 +48,25 @@
     <orderEntry type="library" name="Maven: org.apache.lucene:lucene-queries:5.2.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.lucene:lucene-sandbox:5.2.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tika:tika-core:1.11" level="project" />
-    <orderEntry type="module" module-name="che-core-api-model" />
-    <orderEntry type="module" module-name="che-core-api-project-shared" />
-    <orderEntry type="module" module-name="che-core-api-workspace" />
-    <orderEntry type="module" module-name="che-core-api-account" />
-    <orderEntry type="module" module-name="che-core-api-agent" />
-    <orderEntry type="module" module-name="che-core-api-agent-shared" />
-    <orderEntry type="module" module-name="che-core-api-machine" />
-    <orderEntry type="module" module-name="che-core-api-machine-shared" />
-    <orderEntry type="module" module-name="che-core-api-workspace-shared" />
-    <orderEntry type="module" module-name="che-core-commons-schedule" />
-    <orderEntry type="module" module-name="wsagent-local" />
-    <orderEntry type="module" module-name="che-core-api-user" />
-    <orderEntry type="module" module-name="che-core-api-user-shared" />
-    <orderEntry type="module" module-name="che-core-commons-inject" />
+    <orderEntry type="library" name="Maven: org.eclipse.che.core:che-core-api-project-shared:5.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.che.core:che-core-commons-schedule:5.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.che.core:che-core-api-workspace:5.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet:javax.servlet-api:3.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.che.core:che-core-api-account:5.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.che.core:che-core-api-agent:5.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.che.core:che-core-api-agent-shared:5.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.che.core:che-core-api-workspace-shared:5.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.che.core:che-core-commons-inject:5.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.google.inject.extensions:guice-servlet:4.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.everrest:everrest-integration-guice:1.13.1" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.che.core:wsagent-local:5.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.che.core:che-core-api-user:5.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.che.core:che-core-api-user-shared:5.0.0-SNAPSHOT" level="project" />
     <orderEntry type="module" module-name="che-plugin-emf-shared" />
     <orderEntry type="library" name="Maven: org.eclipse.emf:org.eclipse.emf.common:2.11.0-v20150123-0347" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.emf:org.eclipse.emf.ecore:2.11.0-v20150123-0347" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.emf:org.eclipse.emf.ecore.xmi:2.11.0-v20150123-0347" level="project" />
     <orderEntry type="library" name="Maven: org.emfjson:emfjson-jackson:0.13.0" level="project" />
     <orderEntry type="library" name="Maven: org.emfjson:emfjson-core:0.13.0" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.5.0" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.5.0" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.5.0" level="project" />
   </component>
 </module>

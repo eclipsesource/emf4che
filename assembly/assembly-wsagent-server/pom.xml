@@ -15,7 +15,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>che-plugin-emf-assembly-parent</artifactId>
-        <groupId>org.eclipse.che</groupId>
+        <groupId>com.eclipsesource.che.plugin</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <artifactId>assembly-wsagent-server</artifactId>
@@ -31,7 +31,8 @@
             <artifactId>maven-dependency-tree</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.che</groupId>
+            <version>1.0.0-SNAPSHOT</version>
+            <groupId>com.eclipsesource.che.plugin</groupId>
             <artifactId>assembly-wsagent-war</artifactId>
             <type>war</type>
         </dependency>

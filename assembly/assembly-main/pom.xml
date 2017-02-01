@@ -15,7 +15,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>che-plugin-emf-assembly-parent</artifactId>
-        <groupId>org.eclipse.che</groupId>
+        <groupId>com.eclipsesource.che.plugin</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <artifactId>assembly-main</artifactId>
@@ -23,17 +23,20 @@
     <name>Che IDE :: Assemblies Tomcat</name>
     <dependencies>
         <dependency>
-            <groupId>org.eclipse.che</groupId>
+            <version>1.0.0-SNAPSHOT</version>
+            <groupId>com.eclipsesource.che.plugin</groupId>
             <artifactId>assembly-ide-war</artifactId>
             <type>war</type>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.che</groupId>
+            <version>1.0.0-SNAPSHOT</version>
+            <groupId>com.eclipsesource.che.plugin</groupId>
             <artifactId>assembly-wsagent-server</artifactId>
             <type>tar.gz</type>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.che</groupId>
+            <version>1.0.0-SNAPSHOT</version>
+            <groupId>com.eclipsesource.che.plugin</groupId>
             <artifactId>assembly-wsmaster-war</artifactId>
             <type>war</type>
         </dependency>

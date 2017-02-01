@@ -34,7 +34,7 @@
         <url>https://eclipsesource/emf4che</url>
     </scm>
     <properties>
-        <che.version>5.0.0-SNAPSHOT</che.version>
+        <che.version>5.1.2</che.version>
         <dto-generator-out-directory>${project.build.directory}/generated-sources/dto/</dto-generator-out-directory>
         <license_contributor>EclipseSource - Initial implementation</license_contributor>
     </properties>

@@ -15,7 +15,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>eclipsesource-ide-parent</artifactId>
-        <groupId>org.eclipse.che</groupId>
+        <groupId>com.eclipsesource.che.plugin</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <groupId>org.eclipse.che.plugin</groupId>

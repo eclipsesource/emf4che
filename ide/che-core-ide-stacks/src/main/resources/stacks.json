@@ -1,0 +1,63 @@
+[
+  {
+    "id": "emf-default",
+    "creator": "EclipseSource Munich GmbH",
+    "name": "EMF",
+    "description": "Default EMF stack with Eclipse Neon.1",
+    "scope": "advanced",
+    "tags": [
+      "Ubuntu",
+      "Java",
+      "EMF"
+    ],
+    "components": [
+      {
+        "name": "OpenJDK",
+        "version": "1.8.0"
+      },
+      {
+        "name": "Ubuntu",
+        "version": "14.04"
+      },
+      {
+        "name": "Eclipse Neon",
+        "version": "4.6.0.I20160913-0900"
+      }
+    ],
+    "source": {
+      "type": "image",
+      "origin": "eclipsesource/emfneon_jdk8"
+    },
+    "workspaceConfig": {
+      "environments": {
+        "default": {
+          "machines": {
+            "dev-machine": {
+              "agents": [
+                "org.eclipse.che.terminal",
+                "org.eclipse.che.ws-agent",
+                "org.eclipse.che.ssh"
+              ],
+              "servers": {},
+              "attributes": {
+                "memoryLimitBytes": "2147483648"
+              }
+            }
+          },
+          "recipe": {
+            "location": "eclipsesource/emfneon_jdk8",
+            "type": "dockerimage"
+          }
+        }
+      },
+      "name": "default",
+      "defaultEnv": "default",
+      "description": null,
+      "commands": []
+    },
+    "stackIcon": {
+      "name": "type-go.svg",
+      "mediaType": "image/svg+xml"
+    }
+  }
+]

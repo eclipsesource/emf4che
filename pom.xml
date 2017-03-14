@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright (c) 2012-2016 Codenvy, S.A.
+    Copyright (c) 2012-2017 EclipseSource
     All rights reserved. This program and the accompanying materials
     are made available under the terms of the Eclipse Public License v1.0
     which accompanies this distribution, and is available at
@@ -16,16 +16,17 @@
     <parent>
         <artifactId>maven-depmgt-pom</artifactId>
         <groupId>org.eclipse.che.depmgt</groupId>
-        <version>5.0.0-SNAPSHOT</version>
+        <version>5.5.0-SNAPSHOT</version>
     </parent>
-    <groupId>com.eclipsesource.che.plugin</groupId>
+    <groupId>com.eclipsesource.emf</groupId>
     <artifactId>eclipsesource-ide-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Eclipsesource :: Parent</name>
+    <name>Che IDE :: Parent</name>
     <modules>
-        <module>plugin-emf</module>
-        <module>assembly</module>
+        <module>plugins</module>
+        <module>ide</module>
+        <module>assembly-che</module>
     </modules>
     <scm>
         <connection>scm:git:git@github.com:eclipsesource/emf4che.git</connection>
@@ -34,24 +35,48 @@
         <url>https://eclipsesource/emf4che</url>
     </scm>
     <properties>
-        <che.version>5.1.2</che.version>
+        <che.version>5.5.0-SNAPSHOT</che.version>
         <dto-generator-out-directory>${project.build.directory}/generated-sources/dto/</dto-generator-out-directory>
         <license_contributor>EclipseSource - Initial implementation</license_contributor>
+        <license_copyrightOwner>EclipseSource</license_copyrightOwner>
     </properties>
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.eclipse.che.plugin</groupId>
+                <groupId>com.eclipsesource.emf</groupId>
+                <artifactId>assembly-ide-war</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+            <dependency>
+                <groupId>com.eclipsesource.emf</groupId>
+                <artifactId>assembly-wsagent-server</artifactId>
+                <version>${project.version}</version>
+                <type>tar.gz</type>
+            </dependency>
+            <dependency>
+                <groupId>com.eclipsesource.emf</groupId>
+                <artifactId>assembly-wsagent-war</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+            <dependency>
+                <groupId>com.eclipsesource.emf</groupId>
+                <artifactId>che-core-ide-stacks</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.eclipsesource.emf</groupId>
                 <artifactId>che-plugin-emf-ide</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.eclipse.che.plugin</groupId>
+                <groupId>com.eclipsesource.emf</groupId>
                 <artifactId>che-plugin-emf-server</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.eclipse.che.plugin</groupId>
+                <groupId>com.eclipsesource.emf</groupId>
                 <artifactId>che-plugin-emf-shared</artifactId>
                 <version>${project.version}</version>
             </dependency>

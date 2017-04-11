@@ -1,0 +1,1553 @@
+[
+ {
+    "name": "emfforms-makeithappen",
+    "displayName": "emfforms-makeithappen",
+    "path": "/emfforms-makeithappen",
+    "description": "EMFForms makeithappen Example",
+    "projectType": "blank",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "java"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/mathansen/emfforms-makeithappen-blank",
+      "parameters": {
+        "branch":"master"
+      }
+    },
+    "commands": [
+      {
+        "name": "Generate Model Code",
+        "type": "custom",
+        "commandLine": "/eclipse/eclipse -noSplash -data ${current.project.path} -application org.eclipse.emf.codegen.ecore.Generator -model ${current.project.path}/org.eclipse.emf.ecp.makeithappen.model/model/task.genmodel",
+        "attributes": {
+          "previewUrl": ""
+        }
+      },
+      {
+        "name": "Generate Edit Code",
+        "type": "custom",
+        "commandLine": "/eclipse/eclipse -noSplash -data ${current.project.path} -application org.eclipse.emf.codegen.ecore.Generator -edit ${current.project.path}/org.eclipse.emf.ecp.makeithappen.model/model/task.genmodel",
+        "attributes": {
+          "previewUrl": ""
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "java",
+      "emf"
+    ]
+  },
+  {
+    "name": "web-java-petclinic",
+    "displayName": "web-java-petclinic",
+    "path": "/web-java-petclinic",
+    "description": "Petclinic app using MySQL as persistent storage",
+    "projectType": "maven",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "java"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/che-samples/web-java-spring-petclinic.git",
+      "parameters": {
+        "branch":"mysql"
+      }
+    },
+    "commands": [
+      {
+        "name": "build",
+        "type": "mvn",
+        "commandLine": "mvn -f ${current.project.path} clean install -DskipTests",
+        "attributes": {
+          "previewUrl": ""
+        }
+      },
+      {
+        "name": "stop tomcat",
+        "type": "custom",
+        "commandLine": "$TOMCAT_HOME/bin/catalina.sh stop",
+        "attributes": {
+          "previewUrl": ""
+        }
+      },
+      {
+        "name": "build and deploy",
+        "type": "mvn",
+        "commandLine": "mvn -f ${current.project.path} clean install -DskipTests && cp ${current.project.path}/target/*.war $TOMCAT_HOME/webapps/ROOT.war && $TOMCAT_HOME/bin/catalina.sh run 2>&1",
+        "attributes": {
+          "previewUrl": "http://${server.port.8080}"
+        }
+      },
+      {
+        "name": "debug",
+        "type": "mvn",
+        "commandLine": "mvn -f ${current.project.path} clean install -DskipTests && cp ${current.project.path}/target/*.war $TOMCAT_HOME/webapps/ROOT.war && $TOMCAT_HOME/bin/catalina.sh jpda run 2>&1",
+        "attributes": {
+          "previewUrl": "http://${server.port.8080}"
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "Java 1.8, Tomcat 8, MySQL 5.7"
+    ]
+  },
+  {
+    "name": "che-in-che",
+    "displayName": "eclipse-che",
+    "path": "/che",
+    "description": "The Eclipse Che source code. Build Che-in-Che.",
+    "projectType": "maven",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "java"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/eclipse/che",
+      "parameters": {}
+    },
+    "commands": [],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "maven",
+      "java"
+    ]
+  },
+  {
+    "name": "blank-project",
+    "displayName": "blank-project",
+    "path": "/blank-project",
+    "description": "A blank project example.",
+    "projectType": "blank",
+    "mixins": [],
+    "attributes": {
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/che-samples/blank",
+      "parameters": {}
+    },
+    "commands": [],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "blank"
+    ]
+  },
+  {
+    "name": "c-simple-console",
+    "displayName": "c-simple-console",
+    "path": "/c-simple-console",
+    "description": "A simple Hello World in C.",
+    "projectType": "c",
+    "mixins": [],
+    "attributes": {},
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/che-samples/c-simple-console.git",
+      "parameters": {}
+    },
+    "commands": [
+      {
+        "name": "build and run",
+        "type": "custom",
+        "commandLine": "cd ${current.project.path} && gcc -o Hello Hello.c && ./Hello",
+        "attributes": {
+          "previewUrl": ""
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "cpp",
+      "gcc"
+    ]
+  },
+  {
+    "name": "mobile-android-simple",
+    "displayName": "mobile-android-simple",
+    "path": "/mobile-android-simple",
+    "description": "Simple Android Project.",
+    "projectType": "maven",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "java"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/che-samples/mobile-android-simple.git",
+      "parameters": {}
+    },
+    "commands": [
+      {
+        "name": "run",
+        "type": "custom",
+        "commandLine": "mvn -f ${current.project.path} clean install",
+        "attributes": {
+          "previewUrl": "http://${server.port.6080}"
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "Android"
+    ]
+  },
+  {
+    "name": "mobile-android-hello-world",
+    "displayName": "mobile-android-hello-world",
+    "path": "/mobile-android-hello-world",
+    "description": "Simple Android Hello World.",
+    "projectType": "maven",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "java"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/che-samples/mobile-android-hello-world.git",
+      "parameters": {}
+    },
+    "commands": [
+      {
+        "name": "run",
+        "type": "custom",
+        "commandLine": "mvn -f ${current.project.path} clean install",
+        "attributes": {
+          "previewUrl": "http://${server.port.6080}"
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "Android"
+    ]
+  },
+  {
+    "name": "web-go-simple",
+    "displayName": "web-go-simple",
+    "path": "/web-go-simple",
+    "description": "Simple Go Hello World.",
+    "projectType": "blank",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "go"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/che-samples/web-go-simple.git",
+      "parameters": {}
+    },
+    "commands": [
+      {
+        "name": "run",
+        "type": "custom",
+        "commandLine": "cd ${current.project.path} && go get -d && go run main.go",
+        "attributes": {
+          "previewUrl": "http://${server.port.8080}"
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "Go"
+    ]
+  },
+  {
+    "name": "desktop-go-simple",
+    "displayName": "desktop-go-simple",
+    "path": "/desktop-go-simple",
+    "description": "Simple Go Hello World.",
+    "projectType": "blank",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "go"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/che-samples/desktop-go-simple.git",
+      "parameters": {}
+    },
+    "commands": [
+      {
+        "name": "run",
+        "type": "custom",
+        "commandLine": "cd ${current.project.path} && go get -d && go run main.go",
+        "attributes": {
+          "previewUrl": ""
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "Go"
+    ]
+  },
+  {
+    "name": "hadoop-wordcount-simple",
+    "displayName": "hadoop-wordcount-simple",
+    "path": "/hadoop-wordcount-simple",
+    "description": "Simple Hadoop Wordcount Sample.",
+    "projectType": "maven",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "java"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/che-samples/hadoop-wordcount-simple.git",
+      "parameters": {}
+    },
+    "commands": [
+      {
+        "name": "build",
+        "type": "mvn",
+        "commandLine": "mvn -f ${current.project.path} clean install",
+        "attributes": {
+          "previewUrl": ""
+        }
+      },
+      {
+        "name": "run",
+        "type": "custom",
+        "commandLine": "cd ${current.project.path} && mvn exec:java -Dexec.mainClass='org.eclipse.che.wordcount.WordCount'"
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "Hadoop"
+    ]
+  },
+  {
+    "name": "console-python3-simple",
+    "displayName": "console-python3.5-simple",
+    "path": "/console-python3-simple",
+    "description": "Simple Python3.5 Project.",
+    "projectType": "python",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "python"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/che-samples/console-python3-simple.git",
+      "parameters": {}
+    },
+    "commands": [
+      {
+        "name": "run",
+        "type": "custom",
+        "commandLine": "cd ${current.project.path} && python main.py",
+        "attributes": {
+          "previewUrl": ""
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "Python 3.5"
+    ]
+  },
+  {
+    "name": "web-python2.7-simple",
+    "displayName": "web-python2.7-simple",
+    "path": "/web-python2.7-simple",
+    "description": "Simple Python2.7 Project.",
+    "projectType": "python",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "python"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/che-samples/web-python2.7-simple.git",
+      "parameters": {}
+    },
+    "commands": [
+      {
+        "name": "run",
+        "type": "custom",
+        "commandLine": "cd ${current.project.path} && sudo virtualenv /env && sudo pip install -r requirements.txt && python main.py",
+        "attributes": {
+          "previewUrl": "http://${server.port.8080}"
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "Python 2.7"
+    ]
+  },
+  {
+    "name": "web-python-gae-simple",
+    "displayName": "web-python-gae-simple",
+    "path": "/web-python-gae-simple",
+    "description": "Simple Python2.7 Project to deploy to GAE.",
+    "projectType": "python",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "python"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/che-samples/web-python-gae-simple.git",
+      "parameters": {}
+    },
+    "commands": [
+      {
+        "name": "run",
+        "type": "custom",
+        "commandLine": "cd ${GAE} && ./dev_appserver.py 2>&1 --skip_sdk_update_check true --host=0.0.0.0 --admin_host=0.0.0.0 ${current.project.path}",
+        "attributes": {
+          "previewUrl": "http://${server.port.8080}"
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "Python-GAE"
+    ]
+  },
+  {
+    "name": "web-rails-simple",
+    "displayName": "web-rails-simple",
+    "path": "/web-rails-simple",
+    "description": "Simple Rails Project.",
+    "projectType": "blank",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "rails"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/che-samples/web-rails-simple.git",
+      "parameters": {}
+    },
+    "commands": [
+      {
+        "name": "install dependencies",
+        "type": "custom",
+        "commandLine": "cd ${current.project.path} && bundle install",
+        "attributes": {
+          "previewUrl": ""
+        }
+      },
+      {
+        "name": "run",
+        "type": "custom",
+        "commandLine": "cd ${current.project.path} && rails server -b 0.0.0.0",
+        "attributes": {
+          "previewUrl": "http://${server.port.3000}"
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "ruby",
+      "rails"
+    ]
+  },
+  {
+    "name": "console-ruby-simple",
+    "displayName": "console-ruby-simple",
+    "path": "/console-ruby-simple",
+    "description": "Simple Ruby Project.",
+    "projectType": "blank",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "ruby"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/che-samples/console-ruby-simple.git",
+      "parameters": {}
+    },
+    "commands": [
+      {
+        "name": "run",
+        "type": "custom",
+        "commandLine": "cd ${current.project.path} && ruby main.rb",
+        "attributes": {
+          "previewUrl": ""
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "ruby",
+      "rails"
+    ]
+  },
+
+  {
+    "name": "nodejs-hello-world",
+    "displayName": "nodejs-hello-world",
+    "path": "/nodejs-hello-world",
+    "description": "Simple NodeJS Project.",
+    "projectType": "node-js",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "javascript"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/che-samples/web-nodejs-sample.git",
+      "parameters": {}
+    },
+    "commands": [
+      {
+        "name": "run",
+        "type": "custom",
+        "commandLine": "cd ${current.project.path} && node app/app.js",
+        "attributes": {
+          "previewUrl": "http://${server.port.3000}"
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "Node.JS"
+    ]
+  },
+  {                                                                                                                     
+    "name": "angular-patternfly-starter",                                                                               
+    "displayName": "angular-patternfly-starter",                                                                        
+    "path": "/angular-patternfly-starter",                                                                              
+    "description": "Angular PatternFly Starter Project.",                                                               
+    "projectType": "node-js",                                                                                           
+    "mixins": [],                                                                                                       
+    "attributes": {                                                                                                     
+      "language": [                                                                                                     
+        "javascript"                                                                                                    
+      ]                                                                                                                 
+    },                                                                                                                  
+    "modules": [],                                                                                                      
+    "problems": [],                                                                                                     
+    "source": {                                                                                                         
+      "type": "git",                                                                                                    
+      "location": "https://github.com/patternfly/angular-patternfly-demo-app.git",                                            
+      "parameters": {}                                                                                                  
+    },                                                                                                                  
+    "commands": [                                                                                                       
+      {                                                                                                                 
+        "name": "install dependencies",                                                                                 
+        "type": "custom",                                                                                               
+        "commandLine": "cd ${current.project.path} && npm install --no-bin-links && bower install",                     
+        "attributes": {                                                                                                 
+          "previewUrl": ""                                                                                              
+        }                                                                                                               
+      },                                                                                                                
+      {                                                                                                                 
+        "name": "run",                                                                                                  
+        "type": "custom",                                                                                               
+        "commandLine": "cd ${current.project.path} && grunt server",                                                    
+        "attributes": {                                                                                                 
+          "previewUrl": "http://${server.port.8003}"                                                                    
+        }                                                                                                               
+      }                                                                                                                 
+    ],                                                                                                                  
+    "links": [],                                                                                                        
+    "category": "Samples",                                                                                              
+    "tags": [                                                                                                           
+      "nodejs",                                                                                                         
+      "patternfly",                                                                                                     
+      "javascript",                                                                                                     
+      "Node.JS"                                                                                                         
+    ]                                                                                                                   
+  },
+  {
+    "name": "web-java-spring",
+    "displayName": "web-java-spring",
+    "path": "/web-java-spring",
+    "description": "A basic example using Spring servlets. The app returns values entered into a submit form.",
+    "projectType": "maven",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "java"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/che-samples/web-java-spring.git",
+      "parameters": {}
+    },
+    "commands": [
+      {
+        "name": "build",
+        "type": "mvn",
+        "commandLine": "mvn -f ${current.project.path} clean install && cp ${current.project.path}/target/*.war $TOMCAT_HOME/webapps/ROOT.war",
+        "attributes": {
+          "previewUrl": ""
+        }
+      },
+      {
+        "name": "run tomcat",
+        "type": "custom",
+        "commandLine": "$TOMCAT_HOME/bin/catalina.sh run 2>&1",
+        "attributes": {
+          "previewUrl": "http://${server.port.8080}"
+        }
+      },
+      {
+        "name": "stop tomcat",
+        "type": "custom",
+        "commandLine": "$TOMCAT_HOME/bin/catalina.sh stop",
+        "attributes": {
+          "previewUrl": ""
+        }
+      },
+      {
+        "name": "build and run",
+        "type": "mvn",
+        "commandLine": "mvn -f ${current.project.path} clean install && cp ${current.project.path}/target/*.war $TOMCAT_HOME/webapps/ROOT.war && $TOMCAT_HOME/bin/catalina.sh run 2>&1",
+        "attributes": {
+          "previewUrl": "http://${server.port.8080}"
+        }
+      },
+      {
+        "name": "debug",
+        "type": "mvn",
+        "commandLine": "mvn -f ${current.project.path} clean install && cp ${current.project.path}/target/*.war $TOMCAT_HOME/webapps/ROOT.war && $TOMCAT_HOME/bin/catalina.sh jpda run 2>&1",
+        "attributes": {
+          "previewUrl": "http://${server.port.8080}"
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "maven",
+      "spring",
+      "java"
+    ]
+  },
+  {
+    "name": "console-cpp-simple",
+    "displayName": "console-cpp-simple",
+    "path": "/console-cpp-simple",
+    "description": "The app will print Hello World to the console.",
+    "projectType": "blank",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "cpp"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/che-samples/console-cpp-simple.git",
+      "parameters": {}
+    },
+    "commands": [
+      {
+        "name": "build and run",
+        "type": "custom",
+        "commandLine": "cd ${current.project.path} && make && ./a.out",
+        "attributes": {
+          "previewUrl": ""
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "cpp",
+      "gcc"
+    ]
+  },
+  {
+    "name": "web-nodejs-simple",
+    "displayName": "web-nodejs-simple",
+    "path": "/web-nodejs-simple",
+    "description": "Yeoman Starter project.",
+    "projectType": "node-js",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "javascript"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/che-samples/web-nodejs-simple.git",
+      "parameters": {}
+    },
+    "commands": [
+      {
+        "name": "install dependencies",
+        "type": "custom",
+        "commandLine": "cd ${current.project.path} && npm install && bower install",
+        "attributes": {
+          "previewUrl": ""
+        }
+      },
+      {
+        "name": "run",
+        "type": "custom",
+        "commandLine": "cd ${current.project.path} && grunt serve",
+        "attributes": {
+          "previewUrl": "http://${server.port.9000}"
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "Node.JS"
+    ]
+  },
+  {
+    "name": "web-php-simple",
+    "displayName": "web-php-simple",
+    "path": "/web-php-simple",
+    "description": "A hello world PHP script.",
+    "projectType": "php",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "php"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/che-samples/web-php-simple.git",
+      "parameters": {}
+    },
+    "commands": [
+      {
+        "name": "start apache",
+        "type": "custom",
+        "commandLine": "sudo service apache2 start && sudo tail -f /var/log/apache2/access.log -f /var/log/apache2/error.log",
+        "attributes": {
+          "previewUrl": "http://${server.port.80}/${current.project.relpath}"
+        }
+      },
+      {
+        "name": "stop apache",
+        "type": "custom",
+        "commandLine": "sudo service apache2 stop",
+        "attributes": {
+          "previewUrl": ""
+        }
+      },
+      {
+        "name": "restart apache",
+        "type": "custom",
+        "commandLine": "sudo service apache2 restart",
+        "attributes": {
+          "previewUrl": "http://${server.port.80}/${current.project.relpath}"
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "apache",
+      "php"
+    ]
+  },
+  {
+    "name": "web-php-gae-simple",
+    "displayName": "web-php-gae-simple",
+    "path": "/web-php-gae-simple",
+    "description": "A hello world PHP script to deploy to GAE.",
+    "projectType": "php",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "php"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/che-samples/web-php-gae-simple.git",
+      "parameters": {}
+    },
+    "commands": [
+      {
+        "name": "run",
+        "type": "custom",
+        "commandLine": "cd ${GAE} && ./dev_appserver.py 2>&1 --php_executable_path=/usr/bin/php5-cgi --skip_sdk_update_check true --host=0.0.0.0 --admin_host=0.0.0.0 ${current.project.path}",
+        "attributes": {
+          "previewUrl": "http://${server.port.8080}"
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "PHP-GAE"
+    ]
+  },
+  {
+    "name": "console-java-simple",
+    "displayName": "console-java-simple",
+    "path": "/console-java-simple",
+    "description": "A hello world Java application.",
+    "projectType": "maven",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "java"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/che-samples/console-java-simple.git",
+      "parameters": {}
+    },
+    "commands": [
+      {
+        "name": "build",
+        "type": "mvn",
+        "commandLine": "mvn -f ${current.project.path} clean install",
+        "attributes": {
+          "previewUrl": ""
+        }
+      },
+      {
+        "name": "run",
+        "type": "mvn",
+        "commandLine": "mvn -f ${current.project.path} clean install && java -jar ${current.project.path}/target/*.jar",
+        "attributes": {
+          "previewUrl": ""
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "java",
+      "maven"
+    ]
+  },
+  {
+    "name": "aspnet-web-simple",
+    "displayName": "aspnet-web-simple",
+    "path": "/aspnet-mvc-simple",
+    "description": "A simple ASP.net web sample.",
+    "projectType": "blank",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "dotnet"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/che-samples/aspnet-web-simple.git",
+      "parameters": {}
+    },
+    "commands": [
+      {
+        "name": "update dependencies",
+        "type": "custom",
+        "commandLine": "cd ${current.project.path} && dotnet restore",
+        "attributes": {
+          "previewUrl": ""
+        }
+      },
+      {
+        "name": "run",
+        "type": "custom",
+        "commandLine": "cd ${current.project.path} && dotnet run",
+        "attributes": {
+          "previewUrl": "http://${server.port.5000}"
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "dotnet"
+    ]
+  },
+  {
+    "name": "web-javaee-jaxrs",
+    "displayName": "web-javaee-jaxrs",
+    "path": "/web-javaee-jaxrs",
+    "description": "A basic example demonstrating JAXRS running on Apache TomEE",
+    "projectType": "maven",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "java"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/tomitribe/tomee-jaxrs-angular-starter-project.git",
+      "parameters": {}
+    },
+    "commands": [
+      {
+        "name": "build",
+        "type": "mvn",
+        "commandLine": "mvn -f ${current.project.path} clean install && cp ${current.project.path}/target/*.war $TOMEE_HOME/webapps/ROOT.war",
+        "attributes": {
+          "previewUrl": ""
+        }
+      },
+      {
+        "name": "run tomee",
+        "type": "custom",
+        "commandLine": "$TOMEE_HOME/bin/catalina.sh run 2>&1",
+        "attributes": {
+          "previewUrl": "http://${server.port.8080}"
+        }
+      },
+      {
+        "name": "stop tomee",
+        "type": "custom",
+        "commandLine": "$TOMEE_HOME/bin/catalina.sh stop",
+        "attributes": {
+          "previewUrl": ""
+        }
+      },
+      {
+        "name": "build and run",
+        "type": "mvn",
+        "commandLine": "mvn -f ${current.project.path} clean install && cp ${current.project.path}/target/*.war $TOMEE_HOME/webapps/ROOT.war && $TOMEE_HOME/bin/catalina.sh run 2>&1",
+        "attributes": {
+          "previewUrl": "http://${server.port.8080}"
+        }
+      },
+      {
+        "name": "debug",
+        "type": "mvn",
+        "commandLine": "mvn -f ${current.project.path} clean install && cp ${current.project.path}/target/*.war $TOMEE_HOME/webapps/ROOT.war && $TOMEE_HOME/bin/catalina.sh jpda run 2>&1",
+        "attributes": {
+          "previewUrl": "http://${server.port.8080}"
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "TomEE"
+    ]
+  },
+  {
+    "name": "express",
+    "displayName": "express",
+    "path": "/express",
+    "description": "A simple application created by the express-generator tool. Execute the '1. Create and run project' command to create the sample project.",
+    "projectType": "node-js",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "node.JS"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/bitnami/bitnami-docker-che-blank-sample.git",
+      "parameters": {
+        "keepVcs": "false"
+      }
+    },
+    "commands": [
+      {
+        "name": "1. Create and run project",
+        "type": "custom",
+        "commandLine": "print-help && cd ${current.project.path} && npm install express@4.13.4 && express -f . && cp -rn /bitnami/mongodb/conf ${current.project.path} && npm install mongodb@2.1.18 --save && npm install && counter=0; until nc -z localhost 27017; do counter=$((counter+1)); if [ $counter == 10 ]; then echo \"Error: Couldn't connect to MongoDB.\"; exit 1; fi; echo \"Trying to connect to MongoDB at localhost. Attempt $counter.\"; sleep 5; done; echo \"Connected to MongoDB database. Starting application server.\" && npm start",
+        "attributes": {
+          "previewUrl": "http://${server.port.3000}"
+        }
+      },
+      {
+        "name": "2. Run",
+        "type": "custom",
+        "commandLine": "print-help && cd ${current.project.path} && npm start",
+        "attributes": {
+          "previewUrl": "http://${server.port.3000}"
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "Express"
+    ]
+  },
+  {
+    "name": "swift",
+    "displayName": "swift",
+    "path": "/swift",
+    "description": "A hello world application created by Swift. Execute the '1. Create project' command to create the sample project.",
+    "projectType": "blank",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "swift"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/bitnami/bitnami-docker-che-blank-sample.git",
+      "parameters": {
+        "keepVcs": "false"
+      }
+    },
+    "commands": [
+      {
+        "name": "1. Create project",
+        "type": "custom",
+        "commandLine": "print-help && mkdir ${current.project.path}/app_template && cd ${current.project.path}/app_template && swift-package init --type executable 2>&1 | grep -v \"no version information available\"; swift build 2>&1 | grep -v \"no version information available\"; echo \"Project built successfully.\"",
+        "attributes": {}
+      },
+      {
+        "name": "2. Run",
+        "type": "custom",
+        "commandLine": "print-help && cd ${current.project.path}/app_template && swift build 2>&1 | grep -v \"no version information available\"; ./.build/debug/app_template",
+        "attributes": {}
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "Swift"
+    ]
+  },
+  {
+    "name": "laravel",
+    "displayName": "laravel",
+    "path": "/laravel",
+    "description": "A simple application created by Laravel. Execute the '1. Create and run project' command to create the sample project.",
+    "projectType": "php",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "php"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/bitnami/bitnami-docker-che-blank-sample.git",
+      "parameters": {
+        "keepVcs": "false"
+      }
+    },
+    "commands": [
+      {
+        "name": "1. Create and run project",
+        "type": "custom",
+        "commandLine": "print-help && sudo HOME=/root /opt/bitnami/nami/bin/nami start mariadb && cp -an /tmp/laravel-sample/. ${current.project.path} && cd ${current.project.path} && composer update && php artisan migrate && php artisan serve --host=0.0.0.0 --port=3000",
+        "attributes": {
+          "previewUrl": "http://${server.port.3000}/"
+        }
+      },
+      {
+        "name": "2. Run",
+        "type": "custom",
+        "commandLine": "print-help && sudo HOME=/root /opt/bitnami/nami/bin/nami start mariadb && cd ${current.project.path} && php artisan serve --host=0.0.0.0 --port=3000",
+        "attributes": {
+          "previewUrl": "http://${server.port.3000}/"
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "Laravel"
+    ]
+  },
+  {
+    "name": "rails_app",
+    "displayName": "rails_app",
+    "path": "/rails_app",
+    "description": "A simple application created by Rails. Execute the '1. Create and run project' command to create the sample project.",
+    "projectType": "blank",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "ruby"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/bitnami/bitnami-docker-che-blank-sample.git",
+      "parameters": {
+        "keepVcs": "false"
+      }
+    },
+    "commands": [
+      {
+        "name": "1. Create and run project",
+        "type": "custom",
+        "commandLine": "print-help && sudo HOME=/root /opt/bitnami/nami/bin/nami start mariadb && cd ${current.project.path} && mv README.md README-CHE.md && rails new . --skip-bundle --database mysql && sed -Ei 's/\\s*#\\s*gem(.*)therubyracer/gem\\1therubyracer/' Gemfile && bundle install && bundle exec rails db:create && bundle exec rails db:migrate && bundle exec rails server -b 0.0.0.0 -p 3000",
+        "attributes": {
+          "previewUrl": "http://${server.port.3000}/"
+        }
+      },
+      {
+        "name": "2. Run",
+        "type": "custom",
+        "commandLine": "print-help && cd ${current.project.path} && bundle exec rails server -b 0.0.0.0 -p 3000",
+        "attributes": {
+          "previewUrl": "http://${server.port.3000}/"
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "BitnamiRails"
+    ]
+  },
+  {
+    "name": "codeigniter",
+    "displayName": "codeigniter",
+    "path": "/codeigniter",
+    "description": "A simple application created by CodeIgniter. Execute the '1. Create and run project' command to create the sample project.",
+    "projectType": "php",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "php"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/bitnami/bitnami-docker-che-blank-sample.git",
+      "parameters": {
+        "keepVcs": "false"
+      }
+    },
+    "commands": [
+      {
+        "name": "1. Create and run project",
+        "type": "custom",
+        "commandLine": "print-help && sudo HOME=/root /opt/bitnami/nami/bin/nami execute codeigniter createProject --force $(basename ${current.project.path}) | grep -v undefined && php -S 0.0.0.0:8000 -t ${current.project.path}",
+        "attributes": {
+           "previewUrl": "http://${server.port.8000}/"
+        }
+      },
+      {
+        "name": "2. Run",
+        "type": "custom",
+        "commandLine": "print-help && php -S 0.0.0.0:8000 -t ${current.project.path}",
+        "attributes": {
+           "previewUrl": "http://${server.port.8000}/"
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "CodeIgniter"
+    ]
+  },
+  {
+    "name": "symfony",
+    "displayName": "symfony",
+    "path": "/symfony",
+    "description": "A simple application created by Symfony. Execute the '1. Create and run project' command to create the sample project.",
+    "projectType": "php",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "php"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/bitnami/bitnami-docker-che-blank-sample.git",
+      "parameters": {
+        "keepVcs": "false"
+      }
+    },
+    "commands": [
+      {
+        "name": "1. Create and run project",
+        "type": "custom",
+        "commandLine": "print-help && sudo HOME=/root nami execute symfony createProject --force $(basename ${current.project.path}) | grep -v undefined && ln -fs ${current.project.path}/web/app.php ${current.project.path}/web/index.php && php -S 0.0.0.0:8000 -t ${current.project.path}/web",
+        "attributes": {
+           "previewUrl": "http://${server.port.8000}/"
+        }
+      },
+      {
+        "name": "2. Run",
+        "type": "custom",
+        "commandLine": "print-help && php -S 0.0.0.0:8000 -t ${current.project.path}/web",
+        "attributes": {
+           "previewUrl": "http://${server.port.8000}/"
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "Symfony"
+    ]
+  },
+  {
+    "name": "java-play",
+    "displayName": "java-play",
+    "path": "/java-play",
+    "description": "A simple application created by Play. Execute the '1. Create and run project' command to create the sample project.",
+    "projectType": "blank",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "java"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/bitnami/bitnami-docker-che-blank-sample.git",
+      "parameters": {
+        "keepVcs": "false"
+      }
+    },
+    "commands": [
+      {
+        "name": "1. Create and run project",
+        "type": "custom",
+        "commandLine": "print-help && sudo HOME=/root /opt/bitnami/nami/bin/nami execute activator createProject --force $(basename ${current.project.path}) play-java | grep -v undefined && cd ${current.project.path} && /opt/bitnami/activator/bin/activator -Dsbt.log.noformat=true -Doffline=true -Dhttp.host=0.0.0.0 -Dhttp.port=9000 ~run",
+        "attributes": {
+           "previewUrl": "http://${server.port.9000}/"
+        }
+      },
+      {
+        "name": "2. Run",
+        "type": "custom",
+        "commandLine": "print-help && cd ${current.project.path} && /opt/bitnami/activator/bin/activator -Doffline=true -Dhttp.host=0.0.0.0 -Dhttp.port=9000 -Dsbt.log.noformat=true ~run",
+        "attributes": {
+           "previewUrl": "http://${server.port.9000}/"
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "Play"
+    ]
+  },
+  {
+    "name": "astro-splash",
+    "displayName": "astro-splash",
+    "path": "/astro-splash",
+    "description": "An app that uses the Astronomy Picture of the Day API provided by NASA and the Zend Expressive framework.",
+    "projectType": "composer",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "php"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/kaloyan-raev/astrosplash.git",
+      "parameters": {}
+    },
+    "commands": [
+      {
+        "name": "configure",
+        "type": "custom",
+        "commandLine": "chmod 777 ${current.project.path}/data; echo \"<VirtualHost *:80>\n    DocumentRoot ${current.project.path}/public\n    SetEnv APPLICATION_ENV 'development'\n    <Directory ${current.project.path}/public>\n        DirectoryIndex index.php\n        AllowOverride All\n        Require all granted\n    </Directory>\n</VirtualHost>\" | sudo tee /etc/apache2/sites-available/000-default.conf; cp /usr/local/zend/etc/php.ini /tmp/update-php.ini && grep -q 'extension=pcntl.so' /tmp/update-php.ini || echo \"\nextension=pcntl.so\" | sudo tee -a /tmp/update-php.ini && php -c /tmp/update-php.ini ${current.project.path}/bin/update.php && rm /tmp/update-php.ini",
+        "attributes": {
+          "previewUrl": ""
+        }
+      },
+      {
+        "name": "update images",
+        "type": "custom",
+        "commandLine": "cp /usr/local/zend/etc/php.ini /tmp/update-php.ini && grep -q 'extension=pcntl.so' /tmp/update-php.ini || echo \"\nextension=pcntl.so\" | sudo tee -a /tmp/update-php.ini && php -c /tmp/update-php.ini ${current.project.path}/bin/update.php && rm /tmp/update-php.ini",
+        "attributes": {
+          "previewUrl": ""
+        }
+      },
+      {
+        "name": "clean doctrine cache",
+        "type": "custom",
+        "commandLine": "sudo rm -rf ${current.project.path}/data/doctrine-cache",
+        "attributes": {
+          "previewUrl": ""
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "Zend"
+    ]
+  },
+  {
+    "name": "zend-expressive",
+    "displayName": "zend-expressive",
+    "path": "/zend-expressive",
+    "description": "A skeleton application using the Zend Exressive framework. Expressive is a minimalist PSR-7 middleware framework for PHP with routing, DI container, optional templating, and optional error handling capabilities.",
+    "projectType": "composer",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "php"
+      ],
+      "package": [
+        "zendframework/zend-expressive-skeleton"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {},
+    "commands": [
+      {
+        "name": "configure",
+        "type": "custom",
+        "commandLine": "chmod 777 ${current.project.path}/data/cache; echo \"<VirtualHost *:80>\n    DocumentRoot ${current.project.path}/public\n    SetEnv APPLICATION_ENV 'development'\n    <Directory ${current.project.path}/public>\n        DirectoryIndex index.php\n        AllowOverride All\n        Require all granted\n    </Directory>\n</VirtualHost>\" | sudo tee /etc/apache2/sites-available/000-default.conf",
+        "attributes": {
+          "previewUrl": ""
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "Zend"
+    ]
+  },
+  {
+    "name": "zend-framework",
+    "displayName": "zend-framework",
+    "path": "/zend-framework",
+    "description": "A skeleton application using the Zend Framework MVC layer and module systems. It is meant to be used as a starting place for those looking to get their feet wet with Zend Framework.",
+    "projectType": "composer",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "php"
+      ],
+      "package": [
+        "zendframework/skeleton-application"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {},
+    "commands": [
+      {
+        "name": "configure",
+        "type": "custom",
+        "commandLine": "chmod 777 ${current.project.path}/data/cache; echo \"<VirtualHost *:80>\n    DocumentRoot ${current.project.path}/public\n    SetEnv APPLICATION_ENV 'development'\n    <Directory ${current.project.path}/public>\n        DirectoryIndex index.php\n        AllowOverride All\n        Require all granted\n    </Directory>\n</VirtualHost>\" | sudo tee /etc/apache2/sites-available/000-default.conf",
+        "attributes": {
+          "previewUrl": ""
+        }
+      }
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "Zend"
+    ]
+  },
+  {
+    "name": "platformio-arduino-blink",
+    "displayName": "platformio-arduino-blink",
+    "path": "/arduino-blink",
+    "description": "Arduino blink sample",
+    "projectType": "cpp",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "cpp"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/platformio/platformio-examples.git",
+      "parameters": {
+        "keepDir":"atmelavr-and-arduino/arduino-blink",
+        "keepVcs": "false",
+        "convertToTopLevelProject": "true"
+      }
+    },
+    "commands": [
+
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "Platformio"
+    ]
+  },
+  {
+    "name": "platformio-mbed-blink",
+    "displayName": "platformio-mbed-blink",
+    "path": "/mbed-blink",
+    "description": "Mbed blink sample",
+    "projectType": "cpp",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "cpp"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/platformio/platformio-examples.git",
+      "parameters": {
+        "keepDir":"mbed/mbed-blink",
+        "keepVcs": "false",
+        "convertToTopLevelProject": "true"
+      }
+    },
+    "commands": [
+
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "Platformio"
+    ]
+  },
+  {
+    "name": "typescript-greeter",
+    "displayName": "typescript-greeter",
+    "path": "/mbed-blink",
+    "description": "TypeScript greeter sample",
+    "projectType": "typescript",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "typescript"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/Microsoft/TypeScriptSamples.git",
+      "parameters": {
+        "keepDir":"greeter",
+        "keepVcs": "false",
+        "convertToTopLevelProject": "true"
+      }
+    },
+    "commands": [
+
+    ],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "TypeScript","ts"
+    ]
+  }
+]

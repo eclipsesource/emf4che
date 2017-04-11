@@ -43,6 +43,19 @@
         </dependencySet>
         <dependencySet>
             <useProjectArtifact>false</useProjectArtifact>
+            <unpack>true</unpack>
+            <outputDirectory>templates</outputDirectory>
+            <includes>
+                <include>com.eclipsesource.emf:che-core-ide-templates</include>
+            </includes>
+            <unpackOptions>
+                <excludes>
+                    <exclude>META-INF/**</exclude>
+                </excludes>
+            </unpackOptions>
+        </dependencySet>
+        <dependencySet>
+            <useProjectArtifact>false</useProjectArtifact>
             <unpack>false</unpack>
             <outputDirectory>lib</outputDirectory>
             <outputFileNameMapping>ws-agent.tar.gz</outputFileNameMapping>
@@ -60,6 +73,7 @@
                 <exclude>**/tomcat/webapps/ROOT.war</exclude>
                 <exclude>lib/ws-agent.tar.gz</exclude>
                 <exclude>**/stacks/**</exclude>
+                <exclude>**/templates/**</exclude>
             </excludes>
         </fileSet>
     </fileSets>

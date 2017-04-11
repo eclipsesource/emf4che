@@ -36,6 +36,10 @@
             <groupId>com.eclipsesource.emf</groupId>
             <artifactId>che-core-ide-stacks</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.eclipsesource.emf</groupId>
+            <artifactId>che-core-ide-templates</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

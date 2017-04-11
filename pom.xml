@@ -67,6 +67,11 @@
             </dependency>
             <dependency>
                 <groupId>com.eclipsesource.emf</groupId>
+                <artifactId>che-core-ide-templates</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.eclipsesource.emf</groupId>
                 <artifactId>che-plugin-emf-ide</artifactId>
                 <version>${project.version}</version>
             </dependency>

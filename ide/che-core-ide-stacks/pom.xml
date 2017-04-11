@@ -21,4 +21,18 @@
     <artifactId>che-core-ide-stacks</artifactId>
     <packaging>jar</packaging>
     <name>Che IDE :: IDE :: STACKS</name>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.mycila</groupId>
+                <artifactId>license-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>**/type-bitnami.svg</exclude>
+                        <exclude>**/type-zend.svg</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

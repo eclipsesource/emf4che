@@ -26,7 +26,7 @@
     <modules>
         <module>plugins</module>
         <module>ide</module>
-        <module>assembly-che</module>
+        <module>assembly</module>
     </modules>
     <scm>
         <connection>scm:git:git@github.com:eclipsesource/emf4che.git</connection>

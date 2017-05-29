@@ -40,8 +40,6 @@ test-output/
 *.war
 *.ear
 
-
-
 # Logs and databases #
 ######################
 *.log
@@ -54,9 +52,13 @@ test-output/
 ehthumbs.db
 Icon?
 Thumbs.db
-*/overlays
+**/overlays
 *~
 
 # Vagrant temp dir #
 ######################
 .vagrant
+
+# Local testing data #
+######################
+data

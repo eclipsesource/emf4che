@@ -1,5 +1,5 @@
 #!/bin/bash
-EXTRA_ARGS=
+EXTRA_ARGS=--fast
 
 working_dir=$(pwd)
 che_version=$(cat pom.xml  | grep "<.*che.version\>" | grep -o  "[0-9].*[0.9].*[0-9]")

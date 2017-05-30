@@ -15,6 +15,7 @@ import com.google.inject.Provider;
 import org.eclipse.che.ide.api.project.MutableProjectConfig;
 import org.eclipse.che.ide.api.project.type.wizard.ProjectWizardRegistrar;
 import org.eclipse.che.ide.api.wizard.WizardPage;
+import org.eclipse.che.plugin.emf.ide.project.client.ModelSettingsWizardPage;
 import org.eclipse.che.plugin.emf.shared.Constants;
 
 import javax.validation.constraints.NotNull;
@@ -24,6 +25,8 @@ import java.util.List;
 
 /**
  * The project wizard for creating a new Ecore Modeling Project.
+ *
+ * @author Mat Hansen <mhansen@eclipsesource.com>
  */
 public class EcoreModelingProjectWizardRegistrar implements ProjectWizardRegistrar {
 

@@ -14,56 +14,30 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Document;
 import com.google.gwt.dom.client.LinkElement;
 import com.google.inject.Inject;
+import com.google.inject.Singleton;
 import com.google.inject.name.Named;
+import org.eclipse.che.ide.api.action.ActionManager;
+import org.eclipse.che.ide.api.action.DefaultActionGroup;
 import org.eclipse.che.ide.api.editor.EditorRegistry;
 import org.eclipse.che.ide.api.extension.Extension;
 import org.eclipse.che.ide.api.filetypes.FileType;
 import org.eclipse.che.ide.api.filetypes.FileTypeRegistry;
-import org.eclipse.che.ide.api.notification.NotificationManager;
-import org.eclipse.che.plugin.emf.ide.EMFResources;
-import org.eclipse.che.plugin.emf.ide.editor.ecore.EcoreEditorProvider;
-
-import java.util.logging.Logger;
+import org.eclipse.che.plugin.emf.ide.project.action.ShowInEcoreEditorAction;
 
 /**
- * The editor extension for ecore files
+ * The editor extension for Ecore files
+ *
+ * @author Mat Hansen <mhansen@eclipsesource.com>
  */
 @Extension(title = "Ecore Editor")
+@Singleton
 public class EcoreEditorExtension {
 
-    private static final Logger LOG = Logger.getLogger(EcoreEditorExtension.class.getSimpleName());
-
-    private final NotificationManager notificationManager;
-
     @Inject
-    public EcoreEditorExtension(final NotificationManager notificationManager,
-                                final EditorRegistry editorRegistry,
-                                FileTypeRegistry fileTypeRegistry,
+    public EcoreEditorExtension(final EditorRegistry editorRegistry,
+                                final FileTypeRegistry fileTypeRegistry,
                                 final @Named("EcoreFileType") FileType ecoreFile,
-                                final EcoreEditorProvider ecoreEditorProvider,
-                                final EMFResources emfResources) {
-
-        this.notificationManager = notificationManager;
-
-//        this.requireJsLoader = requireJsLoader;
-
-//        editorModule.setEditorInitializer(new AbstractEditorModule.EditorInitializer() {
-//            @Override
-//            public void initialize(final AbstractEditorModule.InitializerCallback callback) {
-//                // add code-splitting of the whole orion editor
-//                GWT.runAsync(new RunAsyncCallback() {
-//                    @Override
-//                    public void onSuccess() {
-//                        injectEcoreEditor(callback);
-//                    }
-//
-//                    @Override
-//                    public void onFailure(final Throwable reason) {
-//                        callback.onFailure(reason);
-//                    }
-//                });
-//            }
-//        });
+                                final EcoreEditorProvider ecoreEditorProvider) {
 
         fileTypeRegistry.registerFileType(ecoreFile);
         editorRegistry.registerDefaultEditor(ecoreFile, ecoreEditorProvider);
@@ -77,6 +51,19 @@ public class EcoreEditorExtension {
         link.setRel("stylesheet");
         link.setHref(url);
         Document.get().getHead().appendChild(link);
+    }
+
+    @Inject
+    private void configureActions(final ActionManager actionManager,
+                                  final ShowInEcoreEditorAction showAsEcoreAction) {
+
+        DefaultActionGroup mainContextMenuGroup = (DefaultActionGroup)actionManager.getAction("resourceOperation");
+        DefaultActionGroup openViewGroup = new DefaultActionGroup("Open With View", true, actionManager);
+        mainContextMenuGroup.add(openViewGroup);
+
+        actionManager.registerAction(ShowInEcoreEditorAction.ACTION_ID, showAsEcoreAction);
+        openViewGroup.addAction(showAsEcoreAction);
+        mainContextMenuGroup.addAction(showAsEcoreAction);
     }
 
 }

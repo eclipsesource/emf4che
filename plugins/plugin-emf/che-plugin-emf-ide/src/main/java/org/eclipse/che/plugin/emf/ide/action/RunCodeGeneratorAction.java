@@ -16,7 +16,6 @@ import org.eclipse.che.ide.api.action.Action;
 import org.eclipse.che.ide.api.action.ActionEvent;
 import org.eclipse.che.ide.api.command.CommandManager;
 import org.eclipse.che.ide.dto.DtoFactory;
-import org.eclipse.che.ide.extension.machine.client.command.custom.CustomCommandType;
 import org.eclipse.che.ide.util.loging.Log;
 
 
@@ -30,16 +29,13 @@ public class RunCodeGeneratorAction extends Action {
 
     private final DtoFactory dtoFactory;
     private CommandManager commandManager;
-    private CustomCommandType customCommandType;
 
     @Inject
     public RunCodeGeneratorAction(DtoFactory dtoFactory,
-                                  CommandManager commandManager,
-                                  CustomCommandType customCommandType) {
+                                  CommandManager commandManager) {
         super("Run code generator", "Run the EMF code generator on this project");
         this.dtoFactory = dtoFactory;
         this.commandManager = commandManager;
-        this.customCommandType = customCommandType;
     }
 
     @Override

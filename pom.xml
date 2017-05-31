@@ -16,7 +16,7 @@
     <parent>
         <artifactId>maven-depmgt-pom</artifactId>
         <groupId>org.eclipse.che.depmgt</groupId>
-        <version>5.5.0</version>
+        <version>5.11.0</version>
     </parent>
     <groupId>com.eclipsesource.emf</groupId>
     <artifactId>eclipsesource-ide-parent</artifactId>
@@ -35,7 +35,7 @@
         <url>https://eclipsesource/emf4che</url>
     </scm>
     <properties>
-        <che.version>5.5.0</che.version>
+        <che.version>5.11.0</che.version>
         <dto-generator-out-directory>${project.build.directory}/generated-sources/dto/</dto-generator-out-directory>
         <license_contributor>EclipseSource - Initial implementation</license_contributor>
         <license_copyrightOwner>EclipseSource</license_copyrightOwner>
@@ -84,6 +84,11 @@
                 <groupId>com.eclipsesource.emf</groupId>
                 <artifactId>che-plugin-emf-shared</artifactId>
                 <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.che</groupId>
+                <artifactId>che-plugin-machine-ext-client</artifactId>
+                <version>${che.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.eclipse.emf</groupId>

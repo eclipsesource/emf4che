@@ -47,7 +47,7 @@ docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock
                        eclipse/che:<version> start
 ```
 
-This is how the command looks like for our testuser setup: ```docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock -v /home/testuser/git/emf4che:/repo -v /home/testuser/che-data/:/data eclipse/che:5.5.0 start```
+This is how the command looks like for our testuser setup: ```docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock -v /home/testuser/git/emf4che:/repo -v /home/testuser/che-data/:/data eclipse/che:5.11.0 start```
 
 Make sure to use an empty data directory otherwise Eclipse Che might complain or not properly include the customizations.
 

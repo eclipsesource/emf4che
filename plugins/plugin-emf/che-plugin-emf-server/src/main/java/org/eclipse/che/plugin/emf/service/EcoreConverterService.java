@@ -31,6 +31,8 @@ import java.util.Map;
 
 
 /**
+ * Ecore XMI/JSON converter service.
+ *
  * @author Mathias Hansen <mhansen@eclipsesource.com>
  */
 @Path(Constants.Rest.ConverterService._ID)

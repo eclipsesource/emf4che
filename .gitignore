@@ -59,6 +59,7 @@ Thumbs.db
 ######################
 .vagrant
 
-# Local testing data #
+# Local data/config #
 ######################
 data
+.mvn

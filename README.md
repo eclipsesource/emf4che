@@ -1,4 +1,7 @@
 # EMF4Che
+
+[![Build Status](https://travis-ci.org/eclipsesource/emf4che.svg?branch=master)](https://travis-ci.org/eclipsesource/emf4che)
+
 This plugin adds support for the Eclipse Modeling Framework (EMF) in Eclipse Che. 
 
 Currently it is in early alpha state, there is support for viewing .ecore files and running the EMF code generator. Please have a look at the open issues to get a better impression of the current state.

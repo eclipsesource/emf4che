@@ -37,6 +37,8 @@ mvn clean install
 
 For a faster build you can also run ```mvn -T 1C -DskipTests -Dskip-validate-sources clean install```
 
+Note: in case your build fails for no apparent reason you might have to reduce the memory settings of the JVM (used during the GWT build). Have a look at the .mvn/jvm.config file.
+
 # Run
 
 Next we want to start the customized Eclipse Che we built above. For this we need to use the [Eclipse Che CLI](https://www.eclipse.org/che/docs/setup/getting-started/index.html#volume-mounts). Use the following command and replace the `<>` tags with your local paths and version.

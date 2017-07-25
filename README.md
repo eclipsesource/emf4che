@@ -1,4 +1,7 @@
 # EMF4Che
+
+[![Build Status](https://travis-ci.org/eclipsesource/emf4che.svg?branch=master)](https://travis-ci.org/eclipsesource/emf4che)
+
 This plugin adds support for the Eclipse Modeling Framework (EMF) in Eclipse Che. 
 
 Currently it is in early alpha state, there is support for viewing .ecore files and running the EMF code generator. Please have a look at the open issues to get a better impression of the current state.
@@ -44,12 +47,12 @@ Note: in case your build fails for no apparent reason you might have to reduce t
 Next we want to start the customized Eclipse Che we built above. For this we need to use the [Eclipse Che CLI](https://www.eclipse.org/che/docs/setup/getting-started/index.html#volume-mounts). Use the following command and replace the `<>` tags with your local paths and version.
 ```bash
 docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock
-                    -v <path-to-emf4che-repo>:/repo
+                    -v <path-to-emf4che-repo>/assembly/assembly-main/target/<built-target>/><built-target>:/assembly
                     -v <path-to-local-data>:/data
-                       eclipse/che:<version> start
+                       eclipse/che-cli:<version> start
 ```
 
-This is how the command looks like for our testuser setup: ```docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock -v /home/testuser/git/emf4che:/repo -v /home/testuser/che-data/:/data eclipse/che:5.11.0 start```
+This is how the command looks like for our testuser setup: ```docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock -v /home/testuser/git/emf4che/assembly/assembly-main/target/eclipse-che-1.0.0-SNAPSHOT/eclipse-che-1.0.0-SNAPSHOT:/assembly -v /home/testuser/che-data/:/data eclipse/che-cli:5.11.0 start```
 
 Make sure to use an empty data directory otherwise Eclipse Che might complain or not properly include the customizations.
 

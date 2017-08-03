@@ -22,6 +22,6 @@ public class JSONGraphOverlay extends JavaScriptObject {
     }
 
     public final static native void setContents(final Element element, final JavaScriptObject contents) /*-{
-        new $wnd.updateEcoreEditorData(element, contents);
+        new $wnd.updateGraphEditorData(element, contents);
     }-*/;
 }

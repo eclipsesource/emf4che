@@ -104,7 +104,7 @@ public class JSONGraphPresenter extends AbstractEditorPresenter {
     }
     @Override
     protected void initializeEditor(OpenEditorCallback callback) {
-      ScriptInjector.fromUrl(GWT.getModuleBaseURL() + "che_jsonforms2.js")
+      ScriptInjector.fromUrl(GWT.getModuleBaseURL() + "che_jsongraph.js")
         .setWindow(ScriptInjector.TOP_WINDOW)
         .setCallback(new Callback<Void, Exception>() {
             @Override
@@ -119,7 +119,7 @@ public class JSONGraphPresenter extends AbstractEditorPresenter {
 
             @Override
             public void onFailure(final Exception e) {
-                Log.error(JSONGraphPresenter.class, "Unable to load che_jsonforms2.js", e);
+                Log.error(JSONGraphPresenter.class, "Unable to load che_jsongraph.js", e);
             }
         }).inject();
 

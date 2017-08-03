@@ -1,0 +1,116 @@
+$roboto-font-path: "assets/roboto/" !default;
+@import "materialize/components/roboto";
+@import "materialize";
+
+.json-graph-editor text {user-select:none}
+/* port styling */
+.json-graph-editor .available-magnet {
+    fill: yellow;
+}
+
+/* element styling */
+.json-graph-editor .available-cell rect {
+    stroke-dasharray: 5, 2;
+}
+.json-graph-editor .joint-link .connection {
+  stroke-width:2
+}
+
+.json-graph-editor dialog > .content {
+  display: flex;
+  flex-direction: column;
+}
+.json-graph-editor dialog > .content > * {
+  flex: 1;
+  margin-top: 0.25em;
+}
+.json-graph-editor dialog > button {
+  width: 100%;
+  margin-top: 1em;
+}
+.json-graph-editor g .joint-port .port-body {
+  visibility: hidden;
+  stroke-width:1px;
+  stroke-dasharray:3,3;
+  transform: scale(1, 1);
+}
+
+.json-graph-editor g:hover > g.joint-port > circle.port-body[port-group="out"] {
+  visibility: visible;
+  transform: scale(0.2, 0.2);
+  stroke-width:1px;
+  opacity: 0.5;
+}
+
+.json-graph-editor g > g.joint-cell.available-cell .port-body[port-group="in"] {
+  visibility: visible;
+  transform: scale(1, 1);
+  opacity: 0.3;
+  z-index: 0;
+  stroke-width:1px;
+  transition:all 0.2s ease;
+}
+
+json-graph.json-graph-editor {
+  display: flex;
+  flex-direction: row;
+}
+
+.json-graph-editor > .palette {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em 0.5em 0.5em 0.5em;
+  background-color: #3e464c;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  border-radius: 2px;
+  width: 15em;
+  height: fit-content;
+}
+
+.json-graph-editor > .palette > h1,
+.json-graph-editor > .properties > h1 {
+  color: #fff;
+  font-size: 1.2em;
+  margin-top: 0.6em;
+  margin-bottom: 0.8em;
+  text-align: center;
+  font-weight: 100;
+}
+
+.json-graph-editor > .palette > button {
+  background-color: #fff;
+  border: 0;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  color: #212121;
+  text-align: left;
+  border-bottom: 1px solid #999;
+  font-weight: bold;
+  height: 3em;
+}
+
+.json-graph-editor > .palette > button:hover {
+  background-color: #dddddd;
+  transition:all 0.3s ease;
+}
+
+.json-graph-editor > .graph {
+  display: flex;
+  flex: 1 auto;
+  margin: 0.5em 0.5em 0.5em 0.5em;
+  background-color: #fff;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  border-radius: 2px;
+}
+
+.json-graph-editor > .properties {
+  display: flex;
+  flex-basis: 20vw;
+  overflow-y: auto;
+  height: 1000px;
+  margin: 0.5em 0.5em 0.5em 0.5em;
+  padding: 0.8em 0.8em;
+  background-color: #fff;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  border-radius: 2px;
+}

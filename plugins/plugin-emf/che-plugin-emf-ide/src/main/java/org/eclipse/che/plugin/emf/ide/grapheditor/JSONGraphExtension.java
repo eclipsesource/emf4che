@@ -39,7 +39,10 @@ public class JSONGraphExtension {
         fileTypeRegistry.registerFileType(jsonFile);
         editorRegistry.register(jsonFile, ecoreEditorProvider);
 
-        injectCssLink(GWT.getModuleBaseForStaticFiles() + "/jsonforms2.css");
+        injectCssLink(GWT.getModuleBaseForStaticFiles() + "/joint.min.css");
+        injectCssLink(GWT.getModuleBaseForStaticFiles() + "/json-graph-editor-core.css");
+        //injectCssLink(GWT.getModuleBaseForStaticFiles() + "/materialize.min.css");
+        injectCssLink(GWT.getModuleBaseForStaticFiles() + "/forms.dark.css");
     }
 
     private static void injectCssLink(final String url) {

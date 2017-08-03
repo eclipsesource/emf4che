@@ -1,0 +1,30 @@
+.dark json-forms{
+  --jsf-main-bg-color: #222227;
+  --jsf-modest-bg-color: #333333;
+  --jsf-border-color: #444444;
+  --jsf-modest-bg-highlight-color: #444444;
+  --jsf-validation-color: darkred;
+  --jsf-main-fg-color: #999999;
+  background-color: var(--jsf-main-bg-color);
+  color: var(--jsf-main-fg-color);
+}
+.dark json-forms input {
+  background-color: var(--jsf-main-bg-color);
+  color: var(--jsf-main-fg-color);
+}
+.dark json-forms input:focus {
+  background-color: var(--jsf-main-bg-color);
+}
+.dark json-forms select {
+  background-color: var(--jsf-main-bg-color);
+  color: var(--jsf-main-fg-color);
+  border-color: var(--jsf-border-color);
+}
+.dark json-forms textarea {
+  background-color: var(--jsf-main-bg-color);
+  color: var(--jsf-main-fg-color);
+}
+.dark json-forms button {
+  background-color: var(--jsf-modest-bg-color);
+  color: var(--jsf-main-fg-color);
+}

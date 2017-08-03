@@ -53,10 +53,6 @@
         </dependency>
         <dependency>
             <groupId>org.eclipse.che.core</groupId>
-            <artifactId>che-core-api-agent</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.che.core</groupId>
             <artifactId>che-core-commons-annotations</artifactId>
         </dependency>
         <dependency>
@@ -72,6 +68,16 @@
             <groupId>org.eclipse.che.core</groupId>
             <artifactId>che-core-ide-app</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.eclipse.che.core</groupId>
+            <artifactId>che-core-api-agent</artifactId>
+        </dependency>
+<!-- Exists in Sikexica
+        <dependency>
+            <groupId>org.eclipse.che.plugin</groupId>
+            <artifactId>che-plugin-machine-ext-client</artifactId>
+        </dependency>
+-->
         <dependency>
             <groupId>org.vectomatic</groupId>
             <artifactId>lib-gwt-svg</artifactId>

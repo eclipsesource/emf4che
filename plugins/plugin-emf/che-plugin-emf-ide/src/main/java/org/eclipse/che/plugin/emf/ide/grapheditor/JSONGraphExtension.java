@@ -8,7 +8,7 @@
  * Contributors:
  *   EclipseSource - Initial implementation
  *******************************************************************************/
-package org.eclipse.che.plugin.emf.ide.editor;
+package org.eclipse.che.plugin.emf.ide.grapheditor;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Document;
@@ -22,28 +22,24 @@ import org.eclipse.che.ide.api.editor.EditorRegistry;
 import org.eclipse.che.ide.api.extension.Extension;
 import org.eclipse.che.ide.api.filetypes.FileType;
 import org.eclipse.che.ide.api.filetypes.FileTypeRegistry;
-import org.eclipse.che.plugin.emf.ide.project.action.ShowInEcoreEditorAction;
 
 /**
- * The editor extension for Ecore files
- *
- * @author Mat Hansen <mhansen@eclipsesource.com>
+ * The editor extensions for json files
  */
-@Extension(title = "Ecore Editor")
+@Extension(title = "JSONGraph Editor")
 @Singleton
-public class EcoreEditorExtension {
+public class JSONGraphExtension {
 
     @Inject
-    public EcoreEditorExtension(final EditorRegistry editorRegistry,
-                                final FileTypeRegistry fileTypeRegistry,
-                                final @Named("EcoreFileType") FileType ecoreFile,
-                                final EcoreEditorProvider ecoreEditorProvider) {
+    public JSONGraphExtension(final EditorRegistry editorRegistry,
+                              FileTypeRegistry fileTypeRegistry,
+                              final @Named("JsonFileType") FileType jsonFile,
+                              final JSONGraphEditorProvider ecoreEditorProvider) {
 
-        fileTypeRegistry.registerFileType(ecoreFile);
-        editorRegistry.registerDefaultEditor(ecoreFile, ecoreEditorProvider);
+        fileTypeRegistry.registerFileType(jsonFile);
+        editorRegistry.register(jsonFile, ecoreEditorProvider);
 
-        injectCssLink("https://fonts.googleapis.com/icon?family=Material+Icons");
-        injectCssLink(GWT.getModuleBaseForStaticFiles() + "/ecore-editor.css");
+        injectCssLink(GWT.getModuleBaseForStaticFiles() + "/jsonforms2.css");
     }
 
     private static void injectCssLink(final String url) {
@@ -55,14 +51,14 @@ public class EcoreEditorExtension {
 
     @Inject
     private void configureActions(final ActionManager actionManager,
-                                  final ShowInEcoreEditorAction showAsEcoreAction) {
+                                  final JSONGraphOpen jsonGraphOpen) {
 
         DefaultActionGroup mainContextMenuGroup = (DefaultActionGroup)actionManager.getAction("resourceOperation");
-        DefaultActionGroup openViewGroup = new DefaultActionGroup("Open with Model Editor...", true, actionManager);
+        DefaultActionGroup openViewGroup = new DefaultActionGroup("Open With View", true, actionManager);
         mainContextMenuGroup.add(openViewGroup);
 
-        actionManager.registerAction(ShowInEcoreEditorAction.ACTION_ID, showAsEcoreAction);
-        openViewGroup.addAction(showAsEcoreAction);
+        actionManager.registerAction(JSONGraphOpen.ACTION_ID, jsonGraphOpen);
+        openViewGroup.addAction(jsonGraphOpen);
+        mainContextMenuGroup.addAction(jsonGraphOpen);
     }
-
 }

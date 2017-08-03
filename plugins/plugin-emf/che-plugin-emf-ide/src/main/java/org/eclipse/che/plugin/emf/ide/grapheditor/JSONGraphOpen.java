@@ -8,7 +8,7 @@
  * Contributors:
  *   EclipseSource - Initial implementation
  *******************************************************************************/
-package org.eclipse.che.plugin.emf.ide.project.action;
+package org.eclipse.che.plugin.emf.ide.grapheditor;
 
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
@@ -16,31 +16,29 @@ import org.eclipse.che.ide.api.action.Action;
 import org.eclipse.che.ide.api.action.ActionEvent;
 import org.eclipse.che.ide.api.parts.PartStackType;
 import org.eclipse.che.ide.api.parts.WorkspaceAgent;
-import org.eclipse.che.plugin.emf.ide.editor.client.EcoreEditorPresenter;
 
 /**
- * Action which opens the selected file using the ecore editor.
- *
- * @author Mat Hansen <mhansen@eclipsesource.com>
+ * Action for opening the JSONForms2Presenter.
  */
 @Singleton
-public class ShowInEcoreEditorAction extends Action {
+public class JSONGraphOpen extends Action {
 
-    public final static String ACTION_ID = "showInEcoreEditorAction";
+    public final static String ACTION_ID = "jsonGraphOpenAction";
 
-    private final WorkspaceAgent workspaceAgent;
-    private final EcoreEditorPresenter ecoreEditorPresenter;
+    private WorkspaceAgent workspaceAgent;
+    private JSONGraphPresenter jsonGraphPresenter;
 
     @Inject
-    public ShowInEcoreEditorAction(WorkspaceAgent workspaceAgent, EcoreEditorPresenter ecoreEditorPresenter) {
-        super("Ecore Editor");
+    public JSONGraphOpen(WorkspaceAgent workspaceAgent, JSONGraphPresenter jsonGraphPresenter) {
+        super("Show JSONGraph View");
         this.workspaceAgent = workspaceAgent;
-        this.ecoreEditorPresenter = ecoreEditorPresenter;
+        this.jsonGraphPresenter = jsonGraphPresenter;
     }
 
     @Override
-    public void actionPerformed(ActionEvent actionEvent) {
-        workspaceAgent.openPart(ecoreEditorPresenter, PartStackType.EDITING);
-        workspaceAgent.setActivePart(ecoreEditorPresenter);
+    public void actionPerformed(ActionEvent e) {
+        workspaceAgent.openPart(jsonGraphPresenter, PartStackType.EDITING);
+        workspaceAgent.setActivePart(jsonGraphPresenter);
     }
+
 }

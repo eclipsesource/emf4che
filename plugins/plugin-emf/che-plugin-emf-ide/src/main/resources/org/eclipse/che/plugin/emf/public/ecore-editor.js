@@ -18171,6 +18171,29 @@ exports.BaseControl = BaseControl;
 
 "use strict";
 
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(1));
+__export(__webpack_require__(87));
+__export(__webpack_require__(4));
+__export(__webpack_require__(14));
+__export(__webpack_require__(5));
+__export(__webpack_require__(6));
+__export(__webpack_require__(35));
+__export(__webpack_require__(2));
+__export(__webpack_require__(37));
+__export(__webpack_require__(104));
+__export(__webpack_require__(106));
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 
 module.exports = {
@@ -18440,7 +18463,7 @@ function unescapeJsonPointer(str) {
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18457,7 +18480,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable:no-invalid-this */
-var jsonforms_1 = __webpack_require__(10);
+var jsonforms_1 = __webpack_require__(8);
 __webpack_require__(13);
 __webpack_require__(25);
 __webpack_require__(24);
@@ -18570,29 +18593,6 @@ if (!customElements.get('ecore-editor')) {
     customElements.define('ecore-editor', EcoreEditor);
 }
 
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(1));
-__export(__webpack_require__(87));
-__export(__webpack_require__(4));
-__export(__webpack_require__(14));
-__export(__webpack_require__(5));
-__export(__webpack_require__(6));
-__export(__webpack_require__(35));
-__export(__webpack_require__(2));
-__export(__webpack_require__(37));
-__export(__webpack_require__(104));
-__export(__webpack_require__(106));
-//# sourceMappingURL=index.js.map
 
 /***/ }),
 /* 11 */
@@ -19079,7 +19079,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var jsonforms_1 = __webpack_require__(10);
+var jsonforms_1 = __webpack_require__(8);
 var _ = __webpack_require__(0);
 /**
  * The JsonEditor renders JSON data specified by a JSON Schema.
@@ -19399,7 +19399,7 @@ function errorSubclass(Subclass) {
 
 var url = __webpack_require__(132)
   , equal = __webpack_require__(18)
-  , util = __webpack_require__(8)
+  , util = __webpack_require__(9)
   , SchemaObject = __webpack_require__(26)
   , traverse = __webpack_require__(81);
 
@@ -20365,7 +20365,7 @@ var compileSchema = __webpack_require__(52)
   , rules = __webpack_require__(53)
   , $dataMetaSchema = __webpack_require__(47)
   , patternGroups = __webpack_require__(74)
-  , util = __webpack_require__(8)
+  , util = __webpack_require__(9)
   , co = __webpack_require__(33);
 
 module.exports = Ajv;
@@ -20857,9 +20857,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var _ = __webpack_require__(0);
-var jsonforms_1 = __webpack_require__(10);
+var jsonforms_1 = __webpack_require__(8);
 var etype_renderer_1 = __webpack_require__(32);
-var ecore_editor_1 = __webpack_require__(9);
+var ecore_editor_1 = __webpack_require__(10);
 var identifyingProperty = '_id';
 var labelProperty = 'name';
 exports.eAttributeRendererTester = jsonforms_1.rankWith(3, jsonforms_1.and(jsonforms_1.uiTypeIs('Control'), jsonforms_1.optionIs('id', 'eAttribute')));
@@ -20932,9 +20932,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var _ = __webpack_require__(0);
-var jsonforms_1 = __webpack_require__(10);
+var jsonforms_1 = __webpack_require__(8);
 var etype_renderer_1 = __webpack_require__(32);
-var ecore_editor_1 = __webpack_require__(9);
+var ecore_editor_1 = __webpack_require__(10);
 var identifyingProperty = '_id';
 var labelProperty = 'name';
 exports.eReferenceRendererTester = jsonforms_1.rankWith(3, jsonforms_1.and(jsonforms_1.uiTypeIs('Control'), jsonforms_1.optionIs('id', 'eReference')));
@@ -20973,7 +20973,7 @@ var EReferenceControl = (function (_super) {
 "use strict";
 
 
-var util = __webpack_require__(8);
+var util = __webpack_require__(9);
 
 module.exports = SchemaObject;
 
@@ -21874,7 +21874,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var jsonforms_1 = __webpack_require__(10);
+var jsonforms_1 = __webpack_require__(8);
 var ETypeControl = (function (_super) {
     __extends(ETypeControl, _super);
     function ETypeControl() {
@@ -23575,7 +23575,7 @@ function compileAsync(schema, meta, callback) {
 "use strict";
 
 
-var util = __webpack_require__(8);
+var util = __webpack_require__(9);
 
 var DATE = /^\d\d\d\d-(\d\d)-(\d\d)$/;
 var DAYS = [0,31,29,31,30,31,30,31,31,30,31,30,31];
@@ -23718,7 +23718,7 @@ function regex(str) {
 
 
 var resolve = __webpack_require__(17)
-  , util = __webpack_require__(8)
+  , util = __webpack_require__(9)
   , errorClasses = __webpack_require__(16)
   , stableStringify = __webpack_require__(34);
 
@@ -24104,7 +24104,7 @@ function vars(arr, statement) {
 
 
 var ruleModules = __webpack_require__(49)
-  , toHash = __webpack_require__(8).toHash;
+  , toHash = __webpack_require__(9).toHash;
 
 module.exports = function rules() {
   var RULES = [
@@ -26881,10 +26881,11 @@ var _ = __webpack_require__(0);
 __webpack_require__(25);
 __webpack_require__(24);
 __webpack_require__(13);
-__webpack_require__(9);
+__webpack_require__(10);
+var jsonforms_1 = __webpack_require__(8);
 var Ajv = __webpack_require__(23);
 __export(__webpack_require__(13));
-__export(__webpack_require__(9));
+__export(__webpack_require__(10));
 /*
  * Handler for a file input change event.
  * Loads the file, converts it to JSON and validates it against the editor's schema.
@@ -26929,6 +26930,64 @@ var fileInputHandler = function (editor) { return function (evt) {
     reader.readAsText(file);
 }; };
 window.onload = function () {
+    jsonforms_1.JsonForms.stylingRegistry.registerMany([
+        {
+            name: 'control',
+            classNames: ['control']
+        },
+        {
+            name: 'control.label',
+            classNames: ['control']
+        },
+        {
+            name: 'control.input',
+            classNames: ['input']
+        },
+        {
+            name: 'control.validation',
+            classNames: ['validation']
+        },
+        {
+            name: 'categorization',
+            classNames: ['jsf-categorization']
+        },
+        {
+            name: 'categorization.master',
+            classNames: ['jsf-categorization-master']
+        },
+        {
+            name: 'categorization.detail',
+            classNames: ['jsf-categorization-detail']
+        },
+        {
+            name: 'category.group',
+            classNames: ['jsf-category-group']
+        },
+        {
+            name: 'array.layout',
+            classNames: ['array-layout']
+        },
+        {
+            name: 'array.children',
+            classNames: ['children']
+        },
+        {
+            name: 'group-layout',
+            classNames: ['group-layout']
+        },
+        {
+            name: 'horizontal-layout',
+            classNames: ['horizontal-layout']
+        },
+        {
+            name: 'vertical-layout',
+            classNames: ['vertical-layout']
+        },
+        {
+            name: 'array-table',
+            classNames: ['array-table-layout', 'control']
+        }
+    ]);
     var editor = document.createElement('ecore-editor');
     // create hidden file input element
     var fileInput = document.createElement('input');
@@ -37829,68 +37888,7 @@ function updateEcoreEditorData(element, data) {
     element.firstChild.remove();
   }
 
-
-    JsonForms.stylingRegistry.registerMany([
-        {
-            name: 'control',
-            classNames: ['control']
-        },
-        {
-            name: 'control.label',
-            classNames: ['control']
-        },
-        {
-            name: 'control.input',
-            classNames: ['input']
-        },
-        {
-            name: 'control.validation',
-            classNames: ['validation']
-        },
-        {
-            name: 'categorization',
-            classNames: ['jsf-categorization']
-        },
-        {
-            name: 'categorization.master',
-            classNames: ['jsf-categorization-master']
-        },
-        {
-            name: 'categorization.detail',
-            classNames: ['jsf-categorization-detail']
-        },
-        {
-            name: 'category.group',
-            classNames: ['jsf-category-group']
-        },
-        {
-            name: 'array.layout',
-            classNames: ['array-layout']
-        },
-        {
-            name: 'array.children',
-            classNames: ['children']
-        },
-        {
-            name: 'group-layout',
-            classNames: ['group-layout']
-        },
-        {
-            name: 'horizontal-layout',
-            classNames: ['horizontal-layout']
-        },
-        {
-            name: 'vertical-layout',
-            classNames: ['vertical-layout']
-        },
-        {
-            name: 'array-table',
-            classNames: ['array-table-layout', 'control']
-        }
-    ]);
-
-
-    var ecoreEditor = document.createElement('ecore-editor');
+  var ecoreEditor = document.createElement('ecore-editor');
   ecoreEditor.data = data;
 
   element.appendChild(ecoreEditor);

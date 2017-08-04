@@ -25,4 +25,11 @@ public class JSONGraphEditorModule extends AbstractGinModule {
     protected void configure() {
         bind(JSONGraphView.class).to(JSONGraphViewImpl.class);
     }
+
+    @Provides
+    @Singleton
+    @javax.inject.Named("JSONGraphFileType")
+    protected FileType provideJSONGraphFile(EMFResources res) {
+        return new FileType(res.icon(), Constants.JSONGRAPH_FILE_EXT);
+    }
 }

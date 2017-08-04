@@ -22,6 +22,7 @@ import org.eclipse.che.ide.api.editor.EditorRegistry;
 import org.eclipse.che.ide.api.extension.Extension;
 import org.eclipse.che.ide.api.filetypes.FileType;
 import org.eclipse.che.ide.api.filetypes.FileTypeRegistry;
+import org.eclipse.che.ide.util.loging.Log;
 
 /**
  * The editor extensions for json files
@@ -33,11 +34,12 @@ public class JSONGraphExtension {
     @Inject
     public JSONGraphExtension(final EditorRegistry editorRegistry,
                               FileTypeRegistry fileTypeRegistry,
-                              final @Named("JsonFileType") FileType jsonFile,
+                              final @Named("JSONGraphFileType") FileType jsonGraphFile,
                               final JSONGraphEditorProvider ecoreEditorProvider) {
 
-        fileTypeRegistry.registerFileType(jsonFile);
-        editorRegistry.register(jsonFile, ecoreEditorProvider);
+        fileTypeRegistry.registerFileType(jsonGraphFile);
+        Log.info(JSONGraphExtension.class,"Register for extension: " + jsonGraphFile.getExtension());
+        editorRegistry.registerDefaultEditor(jsonGraphFile, ecoreEditorProvider);
 
         injectCssLink(GWT.getModuleBaseForStaticFiles() + "/joint.min.css");
         injectCssLink(GWT.getModuleBaseForStaticFiles() + "/json-graph-editor-core.css");

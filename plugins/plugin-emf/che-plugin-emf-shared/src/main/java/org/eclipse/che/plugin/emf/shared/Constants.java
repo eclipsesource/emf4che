@@ -22,6 +22,7 @@ public final class Constants {
 
     public static final String LANGUAGE = "language";
     public static final String ECORE_FILE_EXT = "ecore";
+    public static final String JSONGRAPH_FILE_EXT = "jsongraph";
     public static final String GENMODEL_FILE_EXT = "genmodel";
     public static final String DEFAULT_NS_BASE_URI = "http://www.example.org/";
 

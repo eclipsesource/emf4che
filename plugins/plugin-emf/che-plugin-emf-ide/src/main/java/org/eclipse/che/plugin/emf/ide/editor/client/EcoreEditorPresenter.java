@@ -87,28 +87,34 @@ public class EcoreEditorPresenter extends AbstractEditorPresenter {
     public void doSave(final AsyncCallback<EditorInput> callback) {
 
         String json = JsonUtils.stringify(this.editorContent);
-        Promise<String> jsonData = ecoreConverterClient.convertJsonToXmi(json);
+        input.getFile().updateContent(json);
+        if (callback != null) {
+            callback.onSuccess(getEditorInput());
+        }
 
-        jsonData.then(new Operation<String>() {
-            @Override
-            public void apply(String xmiData) throws OperationException {
-                input.getFile().updateContent(xmiData);
-            }
-        }).then(new Operation<String>() {
-            @Override
-            public void apply(String s) throws OperationException {
-                if (callback != null) {
-                    callback.onSuccess(getEditorInput());
-                }
-            }
-        }).catchError(new Operation<PromiseError>() {
-            @Override
-            public void apply(PromiseError promiseError) throws OperationException {
-                if (callback != null) {
-                    callback.onFailure(promiseError.getCause());
-                }
-            }
-        });
+//        String json = JsonUtils.stringify(this.editorContent);
+//        Promise<String> jsonData = ecoreConverterClient.convertJsonToXmi(json);
+//
+//        jsonData.then(new Operation<String>() {
+//            @Override
+//            public void apply(String xmiData) throws OperationException {
+//                input.getFile().updateContent(xmiData);
+//            }
+//        }).then(new Operation<String>() {
+//            @Override
+//            public void apply(String s) throws OperationException {
+//                if (callback != null) {
+//                    callback.onSuccess(getEditorInput());
+//                }
+//            }
+//        }).catchError(new Operation<PromiseError>() {
+//            @Override
+//            public void apply(PromiseError promiseError) throws OperationException {
+//                if (callback != null) {
+//                    callback.onFailure(promiseError.getCause());
+//                }
+//            }
+//        });
 
     }
 
@@ -234,9 +240,9 @@ public class EcoreEditorPresenter extends AbstractEditorPresenter {
 
     @Override
     public void close(final boolean save) {
-        if (save) { // TODO: set dirty state
+//        if (save) { // TODO: set dirty state
             doSave();
-        }
+//        }
         workspaceAgent.removePart(this);
     }
 

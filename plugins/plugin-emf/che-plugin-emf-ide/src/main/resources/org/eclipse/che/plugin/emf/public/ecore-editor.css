@@ -1,45 +1,102 @@
-/*******************************************************************************
- * Copyright (c) 2012-2017 EclipseSource
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- *
- * Contributors:
- *   EclipseSource - Initial implementation
- *******************************************************************************/
-/** The Ecore Editor css overrides **/
+body {
+  font-family: 'Roboto', sans-serif;
+}
+json-forms {
+  --jsf-main-bg-color: #222227;
+  --jsf-modest-bg-color: #333333;
+  --jsf-border-color: #444444;
+  --jsf-modest-bg-highlight-color: #444444;
+  --jsf-validation-color: darkred;
+  --jsf-main-fg-color: #999999;
+  background-color: var(--jsf-main-bg-color);
+  color: var(--jsf-main-fg-color);
+}
+json-forms select {
+  background-color: var(--jsf-main-bg-color);
+  color: var(--jsf-main-fg-color);
+  border-color: var(--jsf-border-color);
+}
+json-forms textarea {
+  background-color: var(--jsf-main-bg-color);
+  color: var(--jsf-main-fg-color);
+}
+json-forms button {
+  background-color: var(--jsf-modest-bg-color);
+  color: var(--jsf-main-fg-color);
+}
+.icon {
+  background-repeat: no-repeat;
+}
+.icon.datatype {
+  background-image: url('./icons/EDataType.gif');
+}
+.icon.enum {
+  background-image: url('./icons/EEnum.gif');
+}
+.icon.enumliteral {
+  background-image: url('./icons/EEnumLiteral.gif');
+}
+.icon.package {
+  background-image: url('./icons/EPackage.gif');
+}
+.icon.parameter {
+  background-image: url('./icons/EParameter.gif');
+}
+.icon.reference {
+  background-image: url('./icons/EReference.gif');
+}
+.icon.typeparameter {
+  background-image: url('./icons/ETypeParameter.gif');
+}
+.icon.class {
+  background-image: url('./icons/EClass.gif');
+}
+.icon.attribute {
+  background-image: url('./icons/EAttribute.gif');
+}
+.icon.operation {
+  background-image: url('./icons/EOperation.gif');
+}
+.icon.annotation {
+  background-image: url('./icons/EAnnotation.gif');
+}
 
-.eannotation-icon {
-    background-image: url('/_app/icons/EAnnotation.gif') !important;
+
+/*temporary fix*/
+.tree-master li > div {
+  min-height: 1.25em;
 }
-.eattribute-icon {
-    background-image: url('/_app/icons/EAttribute.gif') !important;
+.tree-master li::after {
+  top:-0.625em;
 }
-.eclass-icon {
-    background-image: url('/_app/icons/EClass.gif') !important;
+
+.label .jse-tree-element-text {
+  float: left;
+  min-width: 2em;
+  min-height: 1em;
 }
-.edatatype-icon {
-    background-image: url('/_app/icons/EDataType.gif') !important;
+
+jsonforms-tree > dialog {
+  margin: 0;
+  padding: 0;
+  border: 1px solid;
 }
-.eenum-icon {
-    background-image: url('/_app/icons/EEnum.gif') !important;
+jsonforms-tree > dialog button {
+  width: 100%;
+  background: #eee;
+  border: 1px solid #ddd;
+  outline: none;
 }
-.eenumliteral-icon {
-    background-image: url('/_app/icons/EEnumLiteral.gif') !important;
+jsonforms-tree > dialog button:focus {
+  outline: none;
 }
-.eoperation-icon {
-    background-image: url('/_app/icons/EOperation.gif') !important;
+jsonforms-tree > dialog button:hover {
+  background: #ddd;
+  border: 1px solid #ccc;
 }
-.epackage-icon {
-    background-image: url('/_app/icons/EPackage.gif') !important;
+.jsf-treeMasterDetail {
+max-height: 100%;
 }
-.eparameter-icon {
-    background-image: url('/_app/icons/EParameter.gif') !important;
-}
-.ereference-icon {
-    background-image: url('/_app/icons/EReference.gif') !important;
-}
-.etypeparameter-icon {
-    background-image: url('/_app/icons/ETypeParameter.gif') !important;
+.jsf-treeMasterDetail > .jsf-treeMasterDetail-content > * {
+overflow: auto;
 }

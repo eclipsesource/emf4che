@@ -1,0 +1,9 @@
+.dark .json-graph-editor > .graph {
+  background-color: darkgrey;
+}
+.dark .json-graph-editor > .palette > button {
+  background-color: lightgrey;
+}
+.dark .json-graph-editor > .properties {
+  background: #222227;
+}

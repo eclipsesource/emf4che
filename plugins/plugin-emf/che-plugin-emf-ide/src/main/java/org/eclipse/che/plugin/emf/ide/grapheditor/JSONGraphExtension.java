@@ -44,6 +44,7 @@ public class JSONGraphExtension {
         injectCssLink(GWT.getModuleBaseForStaticFiles() + "/joint.min.css");
         injectCssLink(GWT.getModuleBaseForStaticFiles() + "/json-graph-editor-core.css");
         //injectCssLink(GWT.getModuleBaseForStaticFiles() + "/materialize.min.css");
+        injectCssLink(GWT.getModuleBaseForStaticFiles() + "/json-graph-editor-dark.css");
         injectCssLink(GWT.getModuleBaseForStaticFiles() + "/forms.dark.css");
     }
 

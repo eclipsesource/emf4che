@@ -223,31 +223,6 @@ public class JSONGraphPresenter extends AbstractEditorPresenter {
           }
           JSONGraphPresenter.this.editorContent = JsonUtils.safeEval(data);
           view.setContent(JSONGraphPresenter.this.editorContent);
-
-          /*
-            // Converter
-            Log.info(EcoreEditorPresenter.class, content);
-            String data = content;
-            if(data == null || data.length()==0) {
-                data = "{}";
-            }
-
-            try {
-
-                Promise<String> jsonData = ecoreConverterClient.convertXmiToJson(data);
-
-                jsonData.then(new Operation<String>() {
-                    @Override
-                    public void apply(String jsonData) throws OperationException {
-                        EcoreEditorPresenter.this.editorContent = JsonUtils.safeEval(jsonData);
-                        view.setContent(EcoreEditorPresenter.this.editorContent);
-                    }
-                });
-
-            } catch (Exception ex) {
-                view.setContent(JsonUtils.safeEval(Constants.DUMMY_DATA));
-            }
-           */
         }
     }
 }

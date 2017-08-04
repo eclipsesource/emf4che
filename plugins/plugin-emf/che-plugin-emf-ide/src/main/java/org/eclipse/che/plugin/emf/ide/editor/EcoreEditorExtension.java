@@ -42,7 +42,8 @@ public class EcoreEditorExtension {
         fileTypeRegistry.registerFileType(ecoreFile);
         editorRegistry.registerDefaultEditor(ecoreFile, ecoreEditorProvider);
 
-        injectCssLink("https://fonts.googleapis.com/icon?family=Material+Icons");
+        injectCssLink(GWT.getModuleBaseForStaticFiles() + "/Roboto-Regular.ttf");
+        injectCssLink(GWT.getModuleBaseForStaticFiles() + "/jsonforms-example.css");
         injectCssLink(GWT.getModuleBaseForStaticFiles() + "/ecore-editor.css");
     }
 

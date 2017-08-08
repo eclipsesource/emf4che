@@ -85,36 +85,29 @@ public class EcoreEditorPresenter extends AbstractEditorPresenter {
 
     @Override
     public void doSave(final AsyncCallback<EditorInput> callback) {
-
         String json = JsonUtils.stringify(this.editorContent);
-        input.getFile().updateContent(json);
-        if (callback != null) {
-            callback.onSuccess(getEditorInput());
-        }
+        Promise<String> jsonData = ecoreConverterClient.convertJsonToXmi(json);
 
-//        String json = JsonUtils.stringify(this.editorContent);
-//        Promise<String> jsonData = ecoreConverterClient.convertJsonToXmi(json);
-//
-//        jsonData.then(new Operation<String>() {
-//            @Override
-//            public void apply(String xmiData) throws OperationException {
-//                input.getFile().updateContent(xmiData);
-//            }
-//        }).then(new Operation<String>() {
-//            @Override
-//            public void apply(String s) throws OperationException {
-//                if (callback != null) {
-//                    callback.onSuccess(getEditorInput());
-//                }
-//            }
-//        }).catchError(new Operation<PromiseError>() {
-//            @Override
-//            public void apply(PromiseError promiseError) throws OperationException {
-//                if (callback != null) {
-//                    callback.onFailure(promiseError.getCause());
-//                }
-//            }
-//        });
+        jsonData.then(new Operation<String>() {
+            @Override
+            public void apply(String xmiData) throws OperationException {
+                input.getFile().updateContent(xmiData);
+            }
+        }).then(new Operation<String>() {
+            @Override
+            public void apply(String s) throws OperationException {
+                if (callback != null) {
+                    callback.onSuccess(getEditorInput());
+                }
+            }
+        }).catchError(new Operation<PromiseError>() {
+            @Override
+            public void apply(PromiseError promiseError) throws OperationException {
+                if (callback != null) {
+                    callback.onFailure(promiseError.getCause());
+                }
+            }
+        });
 
     }
 

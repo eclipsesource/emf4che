@@ -8,30 +8,15 @@
   background-color: var(--jsf-main-bg-color);
   color: var(--jsf-main-fg-color);
 }
+json-forms {
+  flex: 1;
+}
 body {
-  width: calc(100vw - 2em);
-  height: calc(100vh - 2em);
+  /*width: calc(100vw - 2em);*/
+  /*height: calc(100vh - 2em);*/
   margin: 0;
   padding: 1em;
 }
-
-
-jsonforms.labelFixed .control {
-  flex-direction: row;
-}
-jsonforms.labelFixed .control > label {
-  min-width: 10em;
-  text-align: end;
-  margin-right: 1em;
-}
-jsonforms.labelFixed .control > .input {
-  flex: 1;
-}
-/* Workaround for https://bugs.chromium.org/p/chromium/issues/detail?id=375693 */
-/*body.labelFixed .control > fieldset {
-  display: block;
-  width: 100%;
-}*/
 /* Common */
 [hidden] {display: none;}
 /* Controls */
@@ -49,7 +34,13 @@ input {
   flex-direction: column;
   margin: 0.5em 1em;
 }
-.control > * {margin-left: 0.25em;}
+jsonforms-boolean.control {
+  flex-direction: column-reverse;
+}
+jsonforms-boolean.control > .input {
+  margin-left: 0.4em;
+}
+.control > * {margin-left: 0.25em; flex: 1;}
 .control > *:first-child {
   margin-left: 0;
   margin-right: -0.25em;

@@ -43,7 +43,8 @@ public class EcoreEditorExtension {
         editorRegistry.registerDefaultEditor(ecoreFile, ecoreEditorProvider);
 
         injectCssLink(GWT.getModuleBaseForStaticFiles() + "/Roboto-Regular.ttf");
-        injectCssLink(GWT.getModuleBaseForStaticFiles() + "/jsonforms-example.css");
+        injectCssLink(GWT.getModuleBaseForStaticFiles() + "/example-jsonforms.css");
+        injectCssLink(GWT.getModuleBaseForStaticFiles() + "/example-jsonforms.dark.css");
         injectCssLink(GWT.getModuleBaseForStaticFiles() + "/ecore-editor.css");
     }
 

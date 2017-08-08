@@ -21,6 +21,8 @@ import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;
 import org.eclipse.che.api.promises.client.Operation;
 import org.eclipse.che.api.promises.client.OperationException;
+import org.eclipse.che.api.promises.client.Promise;
+import org.eclipse.che.api.promises.client.PromiseError;
 import org.eclipse.che.ide.api.app.AppContext;
 import org.eclipse.che.ide.api.editor.AbstractEditorPresenter;
 import org.eclipse.che.ide.api.editor.EditorAgent;
@@ -104,10 +106,37 @@ public class JSONGraphPresenter extends AbstractEditorPresenter {
     @Override
     public void doSave(AsyncCallback<EditorInput> callback) {
       String json = JsonUtils.stringify(this.editorContent);
-      input.getFile().updateContent(json);
-      if (callback != null) {
-        callback.onSuccess(getEditorInput());
-      }
+        Promise<String> jsonData = ecoreConverterClient.convertJsonToXmi(json);
+
+        jsonData.then(new Operation<String>() {
+            @Override
+            public void apply(String xmiData) throws OperationException {
+		Path location = input.getFile().getLocation();
+                Path ecoreLocation = location.removeFileExtension().addFileExtension("ecore");
+                context.getWorkspaceRoot().getFile(ecoreLocation).then(new Operation<Optional<File>>() 			{
+                    @Override
+                    public void apply(Optional<File> optionalFile) throws OperationException {
+                        if (optionalFile.isPresent()) {
+				optionalFile.get().updateContent(xmiData);
+			}
+		    }
+		});
+            }
+        }).then(new Operation<String>() {
+            @Override
+            public void apply(String s) throws OperationException {
+                if (callback != null) {
+                    callback.onSuccess(getEditorInput());
+                }
+            }
+        }).catchError(new Operation<PromiseError>() {
+            @Override
+            public void apply(PromiseError promiseError) throws OperationException {
+                if (callback != null) {
+                    callback.onFailure(promiseError.getCause());
+                }
+            }
+        });
     }
 
     @Override

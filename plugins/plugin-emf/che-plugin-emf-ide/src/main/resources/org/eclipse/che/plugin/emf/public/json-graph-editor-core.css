@@ -1,6 +1,4 @@
 $roboto-font-path: "assets/roboto/" !default;
-@import "materialize/components/roboto";
-@import "materialize";
 
 .json-graph-editor text {user-select:none}
 /* port styling */
@@ -51,16 +49,21 @@ $roboto-font-path: "assets/roboto/" !default;
   transition:all 0.2s ease;
 }
 
+ecore-graph {
+  display:flex;
+  flex-direction: row;
+}
+
 json-graph.json-graph-editor {
   display: flex;
-  flex-direction: row;
+  flex: 1 auto;
 }
 
 .json-graph-editor > .palette {
   display: flex;
   flex-direction: column;
-  margin: 0.5em 0.5em 0.5em 0.5em;
-  background-color: #3e464c;
+  margin: 0.5em 0.5em 0.5em 0em;
+  background-color: #303030;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   border-radius: 2px;
   width: 15em;
@@ -107,8 +110,8 @@ json-graph.json-graph-editor {
   display: flex;
   flex-basis: 20vw;
   overflow-y: auto;
-  height: 1000px;
-  margin: 0.5em 0.5em 0.5em 0.5em;
+  height:calc(1000px - 1.6em); /* Subtract padding */
+  margin: 0.5em 0em 0.5em 0.5em;
   padding: 0.8em 0.8em;
   background-color: #fff;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);

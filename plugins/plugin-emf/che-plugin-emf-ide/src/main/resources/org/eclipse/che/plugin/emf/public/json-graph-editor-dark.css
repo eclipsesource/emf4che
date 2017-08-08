@@ -2,8 +2,12 @@
   background-color: darkgrey;
 }
 .dark .json-graph-editor > .palette > button {
-  background-color: lightgrey;
+  background-color: darkgrey;
+}
+.dark .json-graph-editor > .palette > button:hover {
+  background-color: #dddddd;
+  transition:all 0.3s ease;
 }
 .dark .json-graph-editor > .properties {
-  background: #222227;
+  background: #303030;
 }
